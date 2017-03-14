@@ -1,0 +1,204 @@
+/* reset */
+body, h1, h2, h3, h4, h5, h6, ul, ol, dd {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background-color: #d03f73;
+}
+ul, ol {
+	list-style: none;
+}
+a, a:link, a:visited, a:hover, a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+/* common */
+.container {
+	margin: 0 auto;
+	width:90%;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.panel {
+	margin: 20px auto;
+	padding: 10px 30px;
+	background-color: #fff;
+	box-shadow: 3px 3px 1px 1px #a0224f; 
+	border-radius: 10px;
+}
+.clear-float {
+	clear: both;
+}
+li.active a {
+	color: #222 !important;
+	font-weight: bold;
+}
+
+
+/* index style */
+
+/* 导航栏/header区 */
+#navbar, #header {
+	height: 60px;
+	line-height: 60px;
+	overflow: hidden;
+}
+#navbar .navList, #header .navList {
+	float: right;
+}
+#navbar .navList .navItem, #header .navList .navItem {
+	margin: 0px 5px;
+	padding: 0px 5px;
+	float: left;
+}
+#navbar .navList .navItem a, #header .navList .navItem a {
+	font-size: 18px;
+	color: #fff;
+}
+#navbar .navList .navItem a:hover, #header .navList .navItem a:hover {
+	color: #222;
+}
+#navbar {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 99;
+}
+
+/* 内容区 */
+#content {
+	padding: 40px 0px;
+	background-color: rgba(255,255,255,.4);
+}
+.main-title, .sub-title, .article-info, .catalog, .catalog-list, .paragraph, .pic-item-title, table.introduction {
+	line-height: 1.8em;
+}
+.main-title {
+	font-size: 30px;
+	color: #111;
+}
+.sub-title {
+	font-size: 22px;
+	color: #333;
+}
+.author-info, .date-info {
+	font-size: 14px;
+	color: #555;
+}
+.catalog {
+	font-weight: bold;
+	font-size: 18px;
+}
+.catalog-list {
+	width: 100%;
+}
+.catalog-item {
+	float: left;
+	margin-right: 10%;
+	font-size: 16px;
+}
+.catalog-item:last-child {
+	margin-right: 0px; 
+}
+.catalog-item a:hover {
+	color: #d03f73;
+}
+p.paragraph {
+	text-indent: 32px;
+}
+.pic-container {
+	overflow: hidden;
+}
+.pic-list {
+	display: inline-block;
+	padding: 20px 10px;
+	width: 30%;
+}
+.pic-item-title, .pic-item-describe  {
+	text-align: center;
+	vertical-align: middle;
+}
+.pic-width {
+	height: 140px;
+}
+table.introduction {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	border: 1px solid #a0224f;
+}
+table.introduction thead {
+	border-color: #a0224f;
+	background-color: #a0224f;
+}
+table.introduction tr:nth-child(even) {
+	/* background-color: #d03f73; */
+}
+table.introduction tfoot {
+	background-color: rgba(220, 220, 220, .4);
+}
+
+/* 侧边栏 */
+#sideBar {
+}
+#reg-form {
+	width: 100%;
+}
+.form-title {
+	padding: 10px 0px;
+	font-size: 20px;
+	text-align: center;
+}
+.enter-form {
+	padding-left: 20px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+	border-left: 3px solid #ccc;
+}
+.form-group {
+	position: relative;
+	padding: 10px 0px;
+	width: 100%;
+	line-height: 1.8em;
+}
+.form-item-name {
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+}
+input[type="text"], input[type="password"], select, textarea {
+	width: 25%;
+	line-height: 24px;
+	font-size: 14px;
+	color: #555;
+	border-radius: 5px;
+}
+input[type="text"], input[type="password"], select {
+	height: 24px;
+}
+.form-item-value {
+	display: inline-block;
+}
+.form-item-tip {
+	display: inline-block;
+}
+.form-summit {
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+}
+
+/* footer区 */
+footer {
+	height: 60px;
+	line-height: 60px;
+}

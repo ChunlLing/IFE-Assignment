@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务三：三栏式布局</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<!-- 第一种方法 -->
+	<div class="common">
+		<pre>
+			第一种：左边左浮动+右边右浮动+中间两边留外边距
+			表现：容器高度由高度最大的子元素决定。
+			不足：HTML文档混乱，在极端情况（浏览器宽度很小）的时候右边浮动元素会覆盖到中间元素上。
+		</pre>
+	</div>
+	<div id="container1" class="common container">
+		<!-- 左边栏 -->
+		<div class="left-side common">
+			<div class="table">
+				<div class="left-cell">				
+					<img src="img/泡芙1.jpg" class="img">
+				</div>
+				<div class="left-cell">
+					<span>最真实的感情，是没有打扮的自然。</span>
+				</div>
+			</div>
+		</div>
+
+		<!--  右边栏 -->
+		<div class="right-side common">
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+		</div>
+
+		<!-- 中间 -->
+		<div class="middle common">
+			<p class="paragraph">
+				《泡芙小姐》系列剧每一集都是由一个独立的小故事构成，该短片每集11分钟，共104集，分为8季。例如《泡芙小姐的沙漏》、《泡芙小姐的钥匙》等借物喻人的主题来源于现实生活的故事情节，它们吸引眼球并饱含深意，该剧引入了美剧的制作和播出模式，拍摄、制作、播出、营销等环节同步进行，并根据网友的反馈实时调整剧情走向，全互动的节目形态备受瞩目，预告片刚上线播出就得到数十万网友的追捧。
+			</p>
+			<!--  
+			<p class="paragraph">
+				中国第一视频网站——优酷及北京互象动画有限公司共同出品的系列都市情感剧《泡芙小姐》已于2011年4月1日在优酷网首播，成为了优酷网截至目前最大规模的在线短片。《泡芙小姐》作为“优酷出品”战略在2011年亮剑的第一波，华丽的制作班底和全新的原创制作模式已成行业焦点。该剧延续“2010年11度青春”系列剧《泡芙小姐的金鱼缸》的原班人马，携手中国最优秀的动画导演皮三和互象动画公司，采用场景实拍和三维立体动画人物相结合的制作手法，为网友呈现全新的视觉饕餮盛宴。
+			</p>
+			<p class="paragraph">
+				《泡芙小姐的金鱼缸》是优酷网2010年11月通过第11度青春新媒体电影项目推出的作品之一，而该项目由中国电影集团、优酷网和雪佛兰科鲁兹共同支持。过去一周，《泡芙小姐》预告片的浏览量已经超过22万次，表明《泡芙小姐》将与《泡芙小姐的金鱼缸》一样受到广泛的欢迎。《泡芙小姐的金鱼缸》的观看次数已经超过500万次。
+			</p>
+			<p class="paragraph">
+				《泡芙小姐》定位为中国版《欲望都市》，将每周与优酷的2.8亿用户见面。每集将围绕一个特定身份女孩的日常生活展开，使泡芙小姐可以见证中国快节奏的都市生活，同时也为通用汽车和联想等提供投放产品广告的机会。
+			</p>
+			-->
+		</div>
+	</div>
+
+	<!-- 第二种方法 -->
+	<div class="common">
+		<pre>
+			第二种：父元素display:table，各栏元素display:table-cell。
+			表现：各栏等高，极端情况下不会重叠。
+			问题：左边栏和中间栏有一段迷之间距？？？
+			推测：1 前面浮动元素的影响：使用clear: both或调换文档结构并没有解决
+				  2 子元素的影响：将左边栏和中间栏的文字替换为图片，间距消失，推测是文字的影响
+				  3 最后的解决方法是display:table-cell之后加上vertival-align: top;  :-(
+		<pre>
+	</div>
+	<div id="container2" class="common container">
+		<!-- 左边栏 -->
+		<div class="left-side common">
+			<div class="table">
+				<div class="left-cell">				
+					<img src="img/泡芙1.jpg" class="img">
+				</div>
+				<div class="left-cell">
+					<span>最真实的感情，是没有打扮的自然。</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- 中间 -->
+		<div class="middle common">
+			<p class="paragraph">
+				《泡芙小姐》系列剧每一集都是由一个独立的小故事构成，该短片每集11分钟，共104集，分为8季。例如《泡芙小姐的沙漏》、《泡芙小姐的钥匙》等借物喻人的主题来源于现实生活的故事情节，它们吸引眼球并饱含深意，该剧引入了美剧的制作和播出模式，拍摄、制作、播出、营销等环节同步进行，并根据网友的反馈实时调整剧情走向，全互动的节目形态备受瞩目，预告片刚上线播出就得到数十万网友的追捧。
+			</p>
+			<!--  -->
+			<p class="paragraph">
+				中国第一视频网站——优酷及北京互象动画有限公司共同出品的系列都市情感剧《泡芙小姐》已于2011年4月1日在优酷网首播，成为了优酷网截至目前最大规模的在线短片。《泡芙小姐》作为“优酷出品”战略在2011年亮剑的第一波，华丽的制作班底和全新的原创制作模式已成行业焦点。该剧延续“2010年11度青春”系列剧《泡芙小姐的金鱼缸》的原班人马，携手中国最优秀的动画导演皮三和互象动画公司，采用场景实拍和三维立体动画人物相结合的制作手法，为网友呈现全新的视觉饕餮盛宴。
+			</p>
+			<p class="paragraph">
+				《泡芙小姐的金鱼缸》是优酷网2010年11月通过第11度青春新媒体电影项目推出的作品之一，而该项目由中国电影集团、优酷网和雪佛兰科鲁兹共同支持。过去一周，《泡芙小姐》预告片的浏览量已经超过22万次，表明《泡芙小姐》将与《泡芙小姐的金鱼缸》一样受到广泛的欢迎。《泡芙小姐的金鱼缸》的观看次数已经超过500万次。
+			</p>
+			<p class="paragraph">
+				《泡芙小姐》定位为中国版《欲望都市》，将每周与优酷的2.8亿用户见面。每集将围绕一个特定身份女孩的日常生活展开，使泡芙小姐可以见证中国快节奏的都市生活，同时也为通用汽车和联想等提供投放产品广告的机会。
+			</p>
+
+		</div>
+
+		<!--  右边栏 -->
+		<div class="right-side common">
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+		</div>
+	</div>
+
+	<!-- 第三种方法 -->
+	<div class="common">
+		<pre>
+			第三种：使用position定位
+			表现：极端情况下会重叠，中间栏会溢出容器
+			不足：需要计算值定位
+		</pre>
+	</div>
+	<div id="container3" class="common container">
+		<!-- 左边栏 -->
+		<div class="left-side common">
+			<div class="table">
+				<div class="left-cell">				
+					<img src="img/泡芙1.jpg" class="img">
+				</div>
+				<div class="left-cell">
+					<span>最真实的感情，是没有打扮的自然。</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- 中间 -->
+		<div class="middle common">
+			<p class="paragraph">
+				《泡芙小姐》系列剧每一集都是由一个独立的小故事构成，该短片每集11分钟，共104集，分为8季。例如《泡芙小姐的沙漏》、《泡芙小姐的钥匙》等借物喻人的主题来源于现实生活的故事情节，它们吸引眼球并饱含深意，该剧引入了美剧的制作和播出模式，拍摄、制作、播出、营销等环节同步进行，并根据网友的反馈实时调整剧情走向，全互动的节目形态备受瞩目，预告片刚上线播出就得到数十万网友的追捧。
+			</p>
+			<!--  -->
+			<p class="paragraph">
+				中国第一视频网站——优酷及北京互象动画有限公司共同出品的系列都市情感剧《泡芙小姐》已于2011年4月1日在优酷网首播，成为了优酷网截至目前最大规模的在线短片。《泡芙小姐》作为“优酷出品”战略在2011年亮剑的第一波，华丽的制作班底和全新的原创制作模式已成行业焦点。该剧延续“2010年11度青春”系列剧《泡芙小姐的金鱼缸》的原班人马，携手中国最优秀的动画导演皮三和互象动画公司，采用场景实拍和三维立体动画人物相结合的制作手法，为网友呈现全新的视觉饕餮盛宴。
+			</p>
+			<p class="paragraph">
+				《泡芙小姐的金鱼缸》是优酷网2010年11月通过第11度青春新媒体电影项目推出的作品之一，而该项目由中国电影集团、优酷网和雪佛兰科鲁兹共同支持。过去一周，《泡芙小姐》预告片的浏览量已经超过22万次，表明《泡芙小姐》将与《泡芙小姐的金鱼缸》一样受到广泛的欢迎。《泡芙小姐的金鱼缸》的观看次数已经超过500万次。
+			</p>
+			<p class="paragraph">
+				《泡芙小姐》定位为中国版《欲望都市》，将每周与优酷的2.8亿用户见面。每集将围绕一个特定身份女孩的日常生活展开，使泡芙小姐可以见证中国快节奏的都市生活，同时也为通用汽车和联想等提供投放产品广告的机会。
+			</p>
+
+		</div>
+
+		<!--  右边栏 -->
+		<div class="right-side common">
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+		</div>
+	</div>
+
+	<!-- 第四种方法 -->
+	<div class="common">
+		<pre>
+			第四种：使用flex布局
+			表现：所有列等高，父元素高度由最大高度的子元素决定
+		</pre>
+	</div>
+	<div id="container4" class="common container">
+		<!-- 左边栏 -->
+		<div class="left-side common">
+			<div class="table">
+				<div class="left-cell">				
+					<img src="img/泡芙1.jpg" class="img">
+				</div>
+				<div class="left-cell">
+					<span>最真实的感情，是没有打扮的自然。</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- 中间 -->
+		<div class="middle common">
+			<p class="paragraph">
+				《泡芙小姐》系列剧每一集都是由一个独立的小故事构成，该短片每集11分钟，共104集，分为8季。例如《泡芙小姐的沙漏》、《泡芙小姐的钥匙》等借物喻人的主题来源于现实生活的故事情节，它们吸引眼球并饱含深意，该剧引入了美剧的制作和播出模式，拍摄、制作、播出、营销等环节同步进行，并根据网友的反馈实时调整剧情走向，全互动的节目形态备受瞩目，预告片刚上线播出就得到数十万网友的追捧。
+			</p>
+			<!--  
+			<p class="paragraph">
+				中国第一视频网站——优酷及北京互象动画有限公司共同出品的系列都市情感剧《泡芙小姐》已于2011年4月1日在优酷网首播，成为了优酷网截至目前最大规模的在线短片。《泡芙小姐》作为“优酷出品”战略在2011年亮剑的第一波，华丽的制作班底和全新的原创制作模式已成行业焦点。该剧延续“2010年11度青春”系列剧《泡芙小姐的金鱼缸》的原班人马，携手中国最优秀的动画导演皮三和互象动画公司，采用场景实拍和三维立体动画人物相结合的制作手法，为网友呈现全新的视觉饕餮盛宴。
+			</p>
+			<p class="paragraph">
+				《泡芙小姐的金鱼缸》是优酷网2010年11月通过第11度青春新媒体电影项目推出的作品之一，而该项目由中国电影集团、优酷网和雪佛兰科鲁兹共同支持。过去一周，《泡芙小姐》预告片的浏览量已经超过22万次，表明《泡芙小姐》将与《泡芙小姐的金鱼缸》一样受到广泛的欢迎。《泡芙小姐的金鱼缸》的观看次数已经超过500万次。
+			</p>
+			<p class="paragraph">
+				《泡芙小姐》定位为中国版《欲望都市》，将每周与优酷的2.8亿用户见面。每集将围绕一个特定身份女孩的日常生活展开，使泡芙小姐可以见证中国快节奏的都市生活，同时也为通用汽车和联想等提供投放产品广告的机会。
+			</p>
+-->
+		</div>
+
+		<!--  右边栏 -->
+		<div class="right-side common">
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+			<div class="right-wrap">
+				<img src="img/泡芙1.jpg" class="img">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

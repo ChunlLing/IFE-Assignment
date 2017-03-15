@@ -1,0 +1,121 @@
+/* 内容设置 */
+.common {
+	padding: 20px;
+	box-sizing: border-box;
+	border: 1px solid #999;
+	background-color: #fff;
+}
+
+.container {
+	margin: 20px auto;
+	background-color: #eee;
+}
+
+.img {
+	width: 80px;
+}
+
+.paragraph {
+	line-height: 1.8em;
+	text-indent: 32px;
+}
+
+.table {
+	display: table;
+}
+
+.left-cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.right-wrap {
+	margin: 10px auto;
+}
+
+.left-side {
+	width: 200px;
+}
+
+.right-side {
+	width: 120px;
+}
+
+/* 
+	第一种：左边左浮动+右边右浮动+中间两边留外边距
+	表现：容器高度由高度最大的子元素决定。
+	不足：HTML文档混乱，在极端情况（浏览器宽度很小）的时候右边浮动元素会覆盖到中间元素上。
+ */
+#container1 {
+	overflow: hidden;
+}
+
+#container1 .left-side {
+	float: left;
+}
+
+#container1 .middle {
+	margin-left: 200px;
+	margin-right: 120px;
+}
+
+#container1 .right-side {
+	float: right;
+}
+
+/* 
+	第二种：父元素display:table，各栏元素display:table-cell。
+	表现：各栏等高，极端情况下不会重叠。
+	问题：左边栏和中间栏有一段迷之间距？？？
+	推测：1 前面浮动元素的影响：使用clear: both或调换文档结构并没有解决
+		  2 子元素的影响：将左边栏和中间栏的文字替换为图片，间距消失，推测是文字的影响
+		  3 最后的解决方法是display:table-cell之后加上vertival-align: top;  :-(
+ */
+#container2 {
+	display: table;
+}
+
+#container2 .left-side, #container2 .middle, #container2 .right-side {
+	display: table-cell;
+	height: 100%;
+	vertical-align: top;
+}
+
+/* 
+	第三种：使用position定位
+	表现：极端情况下会重叠，中间栏会溢出容器
+	不足：需要计算值定位
+*/
+#container3 {
+	position: relative;
+	overflow: hidden;
+}
+
+#container3 .left-side {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#container3 .middle {
+margin-left: 200px;
+margin-right: 120px;
+}
+
+#container3 .right-side {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+/* 
+	第四种：使用flex布局
+*/
+#container4 {
+	display: flex;
+	justify-content: space-between;
+}
+
+#container4 .middle {
+	flex: 1;
+}

@@ -5,9 +5,11 @@ body {
 }
 
 .parent {
-	width: 100%;
-	height: 600px;
+	margin: 20px auto;
+	width: 80%;
+	height: 500px;
 	background-color: #eee;
+	border: 1px solid #000;
 }
 
 .container {
@@ -76,6 +78,7 @@ body {
 	position: absolute;
 	left: -50px;
 	top: -50px;
+	height: auto;
 }
 
 #box3 .circle.right-bottom {
@@ -109,6 +112,6 @@ body {
 
 
 /* 关闭测试 */
-#box1, #box2,  #parent2, #box3 {
+#box2, #parent2, #box3, #box4, #parent4 {
 	display: none;
 }

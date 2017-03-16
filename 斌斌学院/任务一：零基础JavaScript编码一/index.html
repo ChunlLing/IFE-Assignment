@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务一：零基础JavaScript编码一</title>
+</head>
+<body>
+	<label for="text-input">请输入任意文字：</label>
+	<input type="text" id="text-input">
+
+	<button type="button" id="button">确认填写</button>
+
+	<div>
+		您输入的是：
+		<span id="text-display">尚无录入</span>
+	</div>
+	<script type="text/javascript">
+		(function () {
+			// 获取输入表单对象
+			var input = document.getElementById('text-input');
+
+			// 获取显示结果节点对象
+			var display = document.getElementById('text-display');
+			
+			// 获取提交按钮对象
+			var button = document.getElementById('button');
+
+			// 对按钮添加监听事件
+			button.addEventListener('click', function () {
+				// 获取表单对象中输入的值
+				var text = input.value;
+
+				// 判断输入是否为空
+				if (text.replace(/\s/g, '')) {
+					// 将获取到的值传递给显示结果节点对象
+					display.innerText = text;
+				} else {
+					alert('您没有输入任何文字！');
+				}
+			});
+		})()
+	</script>
+</body>
+</html>

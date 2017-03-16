@@ -9,7 +9,8 @@
 	<h3>菜单</h3>
 	<ul id="menu"></ul>
 
-	<button id="button_show">显示菜单</button>
+	<button id="button_show">显示全部菜单</button>
+	<button id="button_filter">只显示价格实惠的菜单</button>
 	<button id="button_hide" disabled>隐藏菜单</button>
 
 	<script type="text/javascript">
@@ -35,30 +36,87 @@
 			var menu = document.getElementById('menu');
 
 			var button_show = document.getElementById('button_show');
+			var button_filter = document.getElementById('button_filter');
 			var button_hide = document.getElementById('button_hide');
 
-			button_show.addEventListener('click', function () {
-				for (var i = 0; i < menuData.length; i++) {
-					// 添加结点
-					var li = document.createElement('li');
-					li.innerHTML ='<pre>' +  menuData[i][0] + '\t\t' + menuData[i][1] + '</pre>';
+			var list = [];
 
-					menu.appendChild(li);
-				}
+			for (var i = 0; i < menuData.length; i++) {
+				// 添加结点
+				var li = document.createElement('li');
+				var name = document.createElement('span');
+				var cost = document.createElement('span');
+				var span = document.createElement('span');
+
+				name.innerText = menuData[i][0];
+				cost.innerText = menuData[i][1];
+				span.innerText = '------------';
+
+				li.appendChild(name);
+				li.appendChild(span);
+				li.appendChild(cost);
+
+				list.push(li);
+			}
+
+			button_show.addEventListener('click', function () {
+				attendNode(list);
+
 				// 切换按钮状态
-				this.disabled = true;
-				button_hide.disabled = false;
+				toggleStatus(this);
+			});
+
+			button_filter.addEventListener('click', function () {
+				// 清除菜单中所有的节点
+				clearNodes();
+
+				var filter = list.filter(function (value) {
+					return parseFloat(value.children[2].innerText) < 5;
+				});
+				attendNode(filter);
+				
+				// 切换按钮状态
+				toggleStatus(this);
 			});
 
 			button_hide.addEventListener('click', function () {
 				// 清除菜单中所有的节点
+				clearNodes();
+
+				// 切换按钮状态
+				toggleStatus(this);
+			});
+
+			// 切换按钮状态
+			function toggleStatus(o) {
+				if (o.id == 'button_show') {
+					o.disabled = true;
+					button_filter.disabled = false;
+					button_hide.disabled = false;
+				} else if (o.id == 'button_filter') {
+					o.disabled = true;
+					button_hide.disabled = false;
+					button_show.disabled = false;
+				} else if (o.id == 'button_hide') {
+					o.disabled = true;
+					button_filter.disabled = false;
+					button_show.disabled = false;
+				}
+			}
+
+			// 将结点插入列表中
+			function attendNode(arr) {
+				for (var i = 0; i < arr.length; i++) {
+					menu.appendChild(arr[i]);
+				}
+			}
+
+			// 清除菜单中所有的节点
+			function clearNodes() {
 				while (menu.hasChildNodes()) {
 					menu.removeChild(menu.firstChild);
 				}
-				// 切换按钮状态
-				this.disabled = true;
-				button_show.disabled = false;
-			});
+			}
 		})();
 	</script>
 	

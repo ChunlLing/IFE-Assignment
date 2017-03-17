@@ -1,0 +1,433 @@
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, li {
+	margin: 0px;
+	padding: 0px;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+body {
+	width: 980px;
+	height: 1386px;
+}
+
+.container {
+	margin: 0px auto;
+	width: 892px;
+}
+
+.row {
+	width: 100%;
+}
+
+
+/* header */
+header {
+	height: 61px;
+	line-height: 100px;
+}
+header .rect {
+	display: inline-block;
+	float: left;
+	width: 110px;
+	height: 61px;
+	text-align: center;
+	background-color: #d45d5c;
+}
+header .header-title {
+	font-size: 12px;
+	font-family: SimHei;
+	color: #fff;
+}
+header .header-date {
+	display: inline-block;
+	float: right;
+	color: #d45d5c;
+	font-size: 12px;
+	font-family: SimHei;
+}
+
+
+/* main */
+#main {
+	padding-top: 34px;
+	padding-bottom: 34px;
+	border-top: 2px solid #938e8c;
+	border-bottom: 1px solid #938e8c;
+}
+#main .row::after, #main .row::before {
+	content: "";
+	display: block;
+	clear: both;
+}
+#main .banner1 {
+	position: relative;
+	float: left;
+	width: 641px;
+	height: 301px;
+}
+#main .banner1 .cover {
+	position: absolute;
+	top: 0px;
+	width: 191px;
+	height: 301px;
+}
+#main .banner1 .cover.cover-left {
+	left: 0px;
+	background-color: rgba(66, 141, 89, .5);
+}
+#main .banner1 .cover.cover-right {
+	right: 0px;
+	background-color: rgba(205, 128, 129, .5);
+}
+#main .paper-title {
+	float: right;
+	width: 203px;
+	border-top: 2px solid #cc8091;
+}
+#main .paper-title .title-head {
+	margin: 20px 0px;
+}
+#main .paper-title h1.title-h {
+	line-height: 1.25;
+	font-size: 24px;
+	color: #000;
+	font-family: "Microsoft YaHei";
+	font-variant: small-caps;
+	text-decoration: underline;
+}
+#main .paper-title p.title-description {
+	margin-top: 5px;
+	line-height: 1;
+	font-size: 12px;
+	color: #676767;
+	font-family: "KaiTi";
+}
+#main .paper-title h1.title-num {
+	margin-left: -25px;
+	line-height: 1;
+	font-size: 116px;
+	color: #75b86b;
+	font-family: "Microsoft YaHei";
+	font-style: italic;
+}
+#main .paper-title .title-date {
+	display: inline-block;
+	line-height: 1;
+	font-size: 55px;
+	color: #cc8091;
+	font-family: "Microsoft YaHei";
+}
+#main .paper-title .title-name {
+	display: inline-block;
+	line-height: 1;
+	font-size: 21px;
+	font-family: "Microsoft YaHei";
+}
+#main .paper-title .title-name .title-top {
+	font-size: 21px;
+	color: #cc8091;
+}
+#main .paper-title .title-name .title-bottom {
+	font-size: 12px;
+	color: #231815;
+}
+
+#main .row-2 {
+	padding: 40px 0px;
+	width: 641px;
+}
+#main .row-2 .col {
+	position: relative;
+	height: 180px;
+	overflow: hidden;
+}
+#main .row-2 .col-1 {
+	padding-right: 30px;
+	float: left;
+	width: 40%;
+	box-sizing: border-box;
+}
+#main .row-2 .col-2 {
+	padding-right: 30px;
+	float: left;
+	width: 30%;
+	box-sizing: border-box;
+}
+#main .row-2 .col-3 {
+	padding-right: 30px;
+	float: left;
+	width: 30%;
+	box-sizing: border-box;
+}
+#main .row-2 article h1 {
+	font-size: 16px;
+	font-family: "Microsoft YaHei";
+	font-weight: bold;
+	text-decoration: underline;
+}
+#main .row-2 article p {
+	margin: 8px 0px;
+	line-height: 1.33;
+	font-size: 12px;
+	font-family: "SimSun";
+	color: #767777;
+}
+#main .row-2 .col-1 article h1 {
+	color: #418c59;
+}
+#main .row-2 .col-2 article h1 {
+	color: #d2994f;
+}
+#main .row-2 .col-3 article h1 {
+	color: #cc7680;
+}
+#main .row-2 .col-3 .article-list {
+	position: absolute;
+	bottom: 0px;
+}
+#main .row-2 .col-3 .article-list li span {
+	display: inline-block;
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+	color: #cd4a48;
+}
+#main .row-2 .col-3 .article-list li span.item-title {
+	width: 34px;
+	line-height: 1.75;
+}
+#main .row-2 .col-3 .article-list .dash-line {
+	vertical-align: middle;
+	width: 44px;
+	height: 1px;
+	border-top: 1px dashed #cd4a48;
+}
+
+#main .row-3 .col {
+	width: 48%;
+	height: 606px;
+	overflow: hidden;
+}
+#main .row-3 .col-1 {
+	float: left;
+}
+#main .row-3 .col-1 .main-title {
+	padding-right: 20px;
+	line-height: 0.9;
+	font-size: 42px;
+	font-family: "SimHei";
+	color: #11456b;
+	box-sizing: border-box;
+}
+#main .row-3 .col-1 .main-title .title-first {
+	font-size: 72px;
+	font-family: "SimHei";
+	font-style: italic;
+	color: #f5e327;
+}
+#main .row-3 .col-1 .sub-title {
+	margin: 8px 0px;
+	font-size: 33px;
+	font-family: "SimHei";
+	color: #11456b;
+}
+#main .row-3 .col-1 .article-content {
+	padding-top: 24px;
+	border-top: 2px solid #11456b;
+}
+#main .row-3 .col-1 .article-content span.first-word {
+	display: block;
+	float: left;
+	padding-right: 10px;
+	font-size: 70px;
+	font-family: "Microsoft YaHei";
+	color: #f5e327;
+}
+#main .row-3 .col-1 .article-content p {
+	font-size: 12px;
+	font-family: "SimHei";
+	text-indent: 24px;
+	color: #767777;
+}
+#main .row-3 .col-1 .article-content p:first-child {
+	text-indent: 0px;
+}
+#main .row-3 .col-1 .article-content .show-img {
+	float: right;
+}
+#main .row-3 .col-2 {
+	float: right;
+}
+#main .row-3 .col-2 .banner2 {
+	position: relative;
+	width: 458px;
+	height: 275px;
+}
+#main .row-3 .col-2 .banner2 .banner-text {
+	position: absolute;
+	top: 196px;
+	padding: 8px 0px 8px 38px;
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	background-color: rgba(4, 0, 0, .4);
+}
+#main .row-3 .col-2 .banner2 .banner-title {
+	display: inline-block;
+	padding-left: 15px;
+	font-size: 26px;
+	font-family: "Microsoft YaHei"; 
+	color: #fff;
+	border-left: 3px solid #72b16a;
+	box-sizing: border-box;
+}
+#main .row-3 .col-2 .banner2 .banner-subtitle {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 12px;
+	font-family: "Microsoft YaHei"; 
+	font-style: italic;
+	letter-spacing: 1;
+	color: #72b16a;
+}
+#main .row-3 .col-2 .catalog {
+	position: relative;
+	padding-top: 32px;
+	width: 458px;
+	height: 318px;
+	background-color: #eeedd6;
+	box-sizing: border-box;
+}
+#main .row-3 .col-2 .catalog ul {
+	margin: 0px auto;
+	width: 406px;
+}
+#main .row-3 .col-2 .catalog ul li::before {
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	bottom: 5px;
+	content: "";
+	margin-left: -24px;
+	width: 0px;
+	height: 0px;
+	border-top: 5px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #10446b;
+	border-left: 7px solid transparent;
+}
+#main .row-3 .col-2 .catalog ul li {
+	position: relative;
+	margin: 16px 48px 16px 24px;
+	font-size: 16px;
+	font-family: "SimSun";
+	text-align: center;
+	color: #5a5b5b;
+}
+#main .row-3 .col-2 .catalog ul li span {
+	display: inline-block;
+}
+#main .row-3 .col-2 .catalog ul li span:first-child {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	text-align: left;
+	background-color: #eeedd6;
+}
+#main .row-3 .col-2 .catalog ul li span:last-child {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: right;
+	background-color: #eeedd6;
+}
+#main .row-3 .col-2 .catalog ul li .dot-line {
+	width: 80%;
+	vertical-align: middle;
+	border-bottom: 1px dashed #cd4a48;
+}
+#main .row-3 .col-2 .catalog .rect {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 40px 10px;
+	width: 260px;
+	height: 160px;
+	background-color: #d45d5c;
+	box-sizing: border-box;
+}
+#main .row-3 .col-2 .catalog .rect .left-h {
+	float: left;
+	margin-right: 5px;
+	padding-right: 5px;
+	height: 86px;
+	line-height: 86px;
+	font-size: 110px;
+	font-family: "Microsoft YaHei";
+	color: #fff;
+	border-right: 2px solid #fff;
+}
+#main .row-3 .col-2 .catalog .rect .right-1 {
+	margin: 7px 0px;
+	line-height: 24px;
+	font-size: 21px;
+	font-family: "SimHei";
+	font-style: italic;
+	color: #fff;
+}
+#main .row-3 .col-2 .catalog .rect .right-2 {
+	line-height: 1;
+	font-size: 12px;
+	font-family: "SimHei";
+	color: #fff;
+}
+#main .row-3 .col-2 .catalog .blockquote {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	padding: 10px 30px 10px 20px;
+	width: 198px;
+	height: 161px;
+	box-sizing: border-box;
+}
+#main .row-3 .col-2 .catalog .blockquote::before {
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	content: "“";
+	line-height: 1;
+	font-size: 72px;
+	font-family: "SimHei";
+	color: #d45d5c;
+}
+#main .row-3 .col-2 .catalog .blockquote::after {
+	position: absolute;
+	bottom: -36px;
+	right: 20px;
+	content: "”";
+	line-height: 1;
+	font-size: 72px;
+	font-family: "SimHei";
+	color: #d45d5c;
+}
+#main .row-3 .col-2 .catalog .blockquote span {
+	display: inline-block;
+	line-height: 16px;
+	font-size: 14px;
+	font-family: "SimHei";
+	font-style: italic;
+	text-indent: 36px;
+	color: #5a5b5b;
+}
+
+/* footer */
+footer .footer-div {
+	text-align: right;
+}
+footer .footer-text {
+	line-height: 16px;
+	font-size: 12px;
+	font-family: "SimHei";
+	color: #d45d5c;
+}

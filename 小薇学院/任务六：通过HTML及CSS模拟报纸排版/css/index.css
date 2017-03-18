@@ -8,8 +8,15 @@ ol, ul {
 }
 
 body {
+	background-color: rgba(128, 128, 128, .4);
+}
+
+#container {
+	margin: 10px auto;
 	width: 980px;
 	height: 1386px;
+	border: 1px solid #000;
+	background-color: #fff;
 }
 
 .container {

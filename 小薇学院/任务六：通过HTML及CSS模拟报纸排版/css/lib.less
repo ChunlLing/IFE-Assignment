@@ -1,0 +1,132 @@
+@charset "utf8";
+
+// 字体 
+@f_fyk: "微软雅黑";
+@f_fht: "黑体";
+@f_fst: "宋体";
+@f_fkt: "楷体";
+
+// 字体大小 
+@f_s: 16px;
+
+// 行距 
+@l_h: 16px;
+
+// 颜色 
+@c_r: #d45d5c;
+@c_w: #fff;
+@c_b: #000;
+@c_y: #f5e327;
+@c_blue: #11456b;
+@c_g: #75b86b;
+@c_p: #cc8091;
+@c_grey: #938e8c;
+
+// 垂直居中 
+.container(@m: 0px;) {
+	margin: @m auto;
+}
+
+// 
+.row() {
+	width: 100%;
+}
+
+// 清除浮动
+.clearfix() {
+	&::after, &::before {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+// 文字设置。默认16px，微软雅黑，黑色，无加粗，无倾斜，无下划线
+.font(@fs: @f_s; @ff: @f_fyk; @c: @c_b; @fw: normal; @fst: none; @td: none; @lh: normal) {
+	font-size: @fs;
+	font-family: @ff;
+	font-weight: @fw;
+	font-style: @fst;
+	text-decoration: @td;
+	color: @c;
+	line-height: @lh;
+}
+
+// 布局设置。默认块级，无浮动，流体布局
+.layout(@d: block; @f: none; @p: static; @w: auto; @h: auto;) {
+	display: @d;
+	float: @f;
+	position: @p;
+	width: @w;
+	height: @h;
+}
+
+// 边框设置。默认1px，黑色，四个方向，实线
+.border(@w: 1px; @c: @c_b; @d; @s: solid) {
+	border@{d}: @w @s @c;
+}
+
+// 分隔线
+.line(@w: 100%; @d: 1px; @s: solid; @c: @c_b; @t: 50%) {
+	vertical-align: middle;
+	width: @w;
+	border-top: @d @s @c;
+}
+
+// 列表项，键值对带分隔线形式
+.item(@w: 100%; @d: 1px; @s: solid; @c: @c_b; @t: 50%; @bg: @c_w) {
+	.layout(inline-block);
+	background-color: @bg;
+	top: 0px;
+	&:nth-child(1) {
+		position: absolute;
+		left: 0px;
+		z-index: 1;
+	}
+	&:nth-child(2) {
+		vertical-align: middle;
+		width: @w;
+		border-top: @d @s @c;
+	}
+	&:nth-child(3) {
+		position: absolute;
+		right: 100% - @w;
+		z-index: 1;
+	}
+}
+
+// 小三角
+.triangle() {
+	&::before {
+		.border(5px, transparent, -top);
+		.border(7px, transparent, -right);
+		.border(7px, #10446b, -bottom);
+		.border(5px, transparent, -left);
+		.layout(inline-block, @p: absolute, @w: 0px, @h: 0px);
+		left: 0px;
+		top: 7px;
+		content: "";
+		margin-left: -24px;
+	}
+}
+
+// 引用号
+.blockquote() {
+	&::before, &::after {
+		.layout(inline-block, @p: absolute);
+		.font(72px, @f_fht, @lh: 16px);
+		color: @c_r;
+	}
+	&::before {
+		content: "“";
+		top:16px;
+		left: -68px;
+		vertical-align: bottom;
+	}
+	&::after {
+		content: "”";
+		bottom: 10px;
+		right: -16px;
+		vertical-align: top;
+	}
+}

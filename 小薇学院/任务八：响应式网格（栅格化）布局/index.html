@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>任务八：响应式网格（栅格化）布局</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	
+	<div id="parent" class="container">
+		<!-- 行数相对于屏幕大于768px而言 -->
+		<!-- 第一行 -->
+		<div class="row">
+			<div class="col-sm-4 col-xs-6 box">屏幕大于768px时占四栏，小于768px时占六栏</div>
+			<div class="col-sm-4 col-xs-6 box">屏幕大于768px时占四栏，小于768px时占六栏</div>
+			<div class="col-sm-4 col-xs-12 box">屏幕大于768px时占四栏，小于768px时占十二栏</div>
+		</div>
+
+		<!-- 第二行 -->
+		<div class="row">
+			<div class="col-sm-3 col-xs-3 box">
+			屏幕大于768px时占三栏，小于768px时占三栏</div>
+			<div class="col-sm-6 col-xs-6 box">
+			屏幕大于768px时占六栏，小于768px时占六栏</div>
+			<div class="col-sm-3 col-xs-3 box">
+			屏幕大于768px时占三栏，小于768px时占三栏</div>
+		</div>
+
+		<!-- 第三行 -->
+		<div class="row">
+			<div class="col-sm-1 col-xs-2 box">
+			屏幕大于768px时占一栏，小于768px时占两栏</div>
+			<div class="col-sm-1 col-xs-2 box">
+			屏幕大于768px时占一栏，小于768px时占两栏</div>
+			<div class="col-sm-2 col-xs-8 box">
+			屏幕大于768px时占两栏，小于768px时占八栏</div>
+			<div class="col-sm-2 col-xs-3 box">
+			屏幕大于768px时占两栏，小于768px时占三栏</div>
+			<div class="col-sm-6 col-xs-3 box">
+			屏幕大于768px时占六栏，小于768px时占三栏</div>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,1 +1,50 @@
 @charset "utf8";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+}
+#parent {
+	overflow: hidden;
+	height: 100%;
+	background-color: #a4a337;
+}
+.box {
+	float: left;
+	overflow: hidden;
+	margin: 20px 20px 20px 0px;
+	height: 50px;
+	border: 1px solid #999;
+	background-color: #eee;
+	font-size: 0.875rem;
+	line-height: 1.2;
+}
+.container {
+	.container(20px);
+}
+.row {
+	.row();
+}
+
+/* lib */
+@grid-columns: 12;				// 默认一行平均分为十二列
+@grid-gutter-width: 20px;		// 列间距20px
+@grid-float-breakpoint: 768px;	// 最小屏幕宽度为768px
+
+.container(@v: 0px) {
+	margin: @v auto;
+}
+.clearfix() {
+	&::before, &::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+.row() {
+	.clearfix();
+	width: 100%;
+	overflow: hidden;
+}
+

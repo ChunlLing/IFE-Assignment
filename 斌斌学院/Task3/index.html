@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>任务三：零基础JavaScript编码（三）</title>
+</head>
+<body>
+	
+	<style>
+		h2 {
+			text-align: center;
+		}
+		ul {
+			list-style: none;
+		}
+		button {
+			margin: 50px;
+		}
+		.container {
+			width: 33%;
+			float: left;
+		}
+		.name, .price {
+			display: inline-block;
+			width: 50%;
+		}
+		.price {
+			text-align: right;
+		}
+	</style>
+	
+	<div class="container">
+		<h2>原始菜单</h2>
+		<ul id="menu">
+			<li><span class="name"><b>名称</b></span><span class="price"><b>价格</b></span></li>
+			<li><span class="name">泡芙</span><span class="price">2</span></li>
+			<li><span class="name">薯条</span><span class="price">1.5</span></li>
+			<li><span class="name">汉堡包</span><span class="price">6</span></li>
+			<li><span class="name">鸡块</span><span class="price">3</span></li>
+			<li><span class="name">冰淇淋</span><span class="price">2.5</span></li>
+			<li><span class="name">奶茶</span><span class="price">5</span></li>
+			<li><span class="name">春卷</span><span class="price">4</span></li>
+			<li><span class="name">香蕉奶</span><span class="price">5.5</span></li>
+			<li><span class="name">蜜汁鸡</span><span class="price">12</span></li>
+			<li><span class="name">香酱饼</span><span class="price">1</span></li>
+		</ul>
+	</div>
+	
+	<div class="container">
+		<h2>排序后菜单</h2>
+		<ul id="sort-menu"></ul>
+	</div>
+	
+	<div class="container">
+		<button id="sort-btn">按价格排序</button>
+	</div>
+
+	<script type="text/javascript">
+		function getData() {
+			var menu = document.getElementById('menu');
+			var data = [];
+			for (var i = 0; i < menu.children.length; i++) {
+				data[i] = new Array();
+				data[i][0] = menu.children[i].children[0].innerText;
+				data[i][1] = menu.children[i].children[1].innerText;
+			}
+			return data;
+		}
+		function sortData(data) {
+			return data.sort(function (x, y) {
+				parseFloat(x[1]);
+				parseFloat(y[1]);
+				return x[1] - y[1];
+			});
+		}
+		function render(data) {
+			var sortMenu = document.getElementById('sort-menu');
+			for (var i = 0; i < data.length; i++) {
+				var li = document.createElement('li');
+				var name = document.createElement('span');
+				var price = document.createElement('span');
+				name.className = 'name';
+				price.className = 'price';
+				// 如果是不是第一行，直接将数据写入
+				// 如果是第一行，将数据包裹在<b>标签内
+				if (i != 0) {
+					name.innerText = data[i][0];
+					price.innerText = data[i][1];
+				} else {
+					var bold1 = document.createElement('b');
+					var bold2 = document.createElement('b');
+					bold1.innerText = data[i][0];
+					name.appendChild(bold1);
+					bold2.innerText = data[i][1];
+					price.appendChild(bold2);
+				}
+				li.appendChild(name);
+				li.appendChild(price);
+				sortMenu.appendChild(li);
+			}
+		}
+		function btnHandle() {
+			var menuData = getData();
+			menuData = sortData(menuData);
+			render(menuData);
+		}
+		function init() {
+			var sortBtn = document.getElementById('sort-btn');
+			sortBtn.addEventListener('click', function (e) {
+				btnHandle();
+				this.disabled = true;
+			});
+		}
+		init();
+	</script>
+	
+</body>
+</html>

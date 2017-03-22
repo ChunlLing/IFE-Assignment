@@ -7,6 +7,11 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 ul, ol, li {
 	list-style: none;
 }
+input[type=text] {
+	padding: 0px;
+	border: 1px solid #aaa;
+	box-sizing: border-box;
+}
 a {
 	text-decoration: none;
 	color: #000;
@@ -114,14 +119,20 @@ body {
 /* module2 */
 .module-2 {
 	display: flex;
+	justify-content: space-around;
 	width: 891px;
 	height: 86px;
 	margin: 20px auto 0px;
 	background-color: #fff;
 }
-.module-2 col {
+.module-2 .col {
+	position: relative;
+	margin: 15px 0px;
+	min-width: 112px;
+	line-height: 30px;
 }
 .module-2 .label-text {
+	padding-right: 10px;
 	font-size: 12px;
 	font-family: "SimHei";
 	line-height: 2.167;
@@ -133,9 +144,51 @@ body {
 	line-height: 2.167;
 	color: #aaa;
 }
-#search-list {
+.module-2 .col-1 {
+	text-align: center;
+}
+.module-2 .col-1 select {
 	width: 71px;
 	height: 26px;
+}
+.module-2 .col-2 select {
+	width: 121px;
+	height: 26px;
+}
+.module-2 .col-2 .change {
+	position: relative;
+	right: -100%;
+	top: -50%;
+	margin-top: -19px;
+	display: block;
+	width: 28px;
+	height: 38px;
+	line-height: 38px;
+	background: url(../imges/change.png) no-repeat center center;
+	color: #fff;
+	font-size: 12px;
+	text-align: right;
+}
+.module-2 .col-3 .short-control {
+	width: 71px;
+	height: 26px;
+}
+.module-2 .col-3 .long-control {
+	width: 121px;
+	height: 26px;
+}
+.module-2 .col-4 .search-box {
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	margin-top: -13px;
+	width: 51px; 
+	height: 26px; 
+	background-color: #388ac1;
+	border-radius: 4px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
 }
 
 /* module3 */

@@ -35,7 +35,7 @@
 				<!-- 模块二 -->
 				<div class="module-2">
 					<div class="col col-1">
-						<label for="#search-list" class="label-text">查询项</label>
+						<label for="search-list" class="label-text">查询项</label>
 						<select name="search-list" id="search-list">
 							<option value="search-1" class="search-item control-text" selected="selected">第一项</option>
 							<option value="search-2" class="search-item control-text">第二项</option>
@@ -44,10 +44,48 @@
 						</select>
 					</div>
 					<div class="col col-2">
-
+						<div class="row-sub">
+							<label for="custom" class="label-text">买方</label>
+							<select name="custom" id="custom">
+								<option value="custom-1" class="custom-item control-text" selected="selected">小A</option>
+								<option value="custom-2" class="custom-item control-text">小B</option>
+							</select>
+						</div>
+						<div class="row-sub">
+							<label for="seller" class="label-text">卖方</label>
+							<select name="seller" id="seller">
+								<option value="seller-1" class="seller-item control-text" selected="selected">小C</option>
+								<option value="seller-2" class="seller-item control-text">小D</option>
+							</select>
+						</div>
+						<div class="change">换</div>
 					</div>
-					<div class="col col-3"></div>
-					<div class="col col-4"></div>
+					<div class="col col-3">
+						<div class="row-sub">
+							<label for="date" class="label-text">日期</label>
+							<input type="text" id="date" class="control-text long-control">
+							<label for="cost-time" class="label-text">总耗时</label>
+							<select name="cost-time" id="cost-time" class="short-control">
+								<option value="cost-time-1" class="cost-time-item control-text" selected="selected">8天</option>
+								<option value="cost-time-2" class="cost-time-item control-text">9天</option>
+							</select>
+						</div>
+						<div class="row-sub">
+							<label for="people" class="label-text">人数</label>
+							<select name="people" id="people" class="short-control">
+								<option value="people-1" class="people-item control-text" selected="selected">8天</option>
+								<option value="people-2" class="people-item control-text">9天</option>
+							</select>
+							<label for="succ" class="label-text">成交项</label>
+							<select name="succ" id="succ" class="long-control">
+								<option value="succ-1" class="succ-item control-text" selected="selected">10项</option>
+								<option value="succ-2" class="succ-item control-text">11项</option>
+							</select>
+						</div>
+					</div>
+					<div class="col col-4">
+						<input type="button" class="search-box" value="搜索">
+					</div>
 				</div>
 			</div>
 			<div class="row row-3">

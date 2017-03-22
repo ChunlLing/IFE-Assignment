@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>任务九：使用HTML/CSS实现一个复杂页面</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<!-- 顶栏 -->
+	<header id="header">
+		<a id="logo" href="#"></a>
+		<div class="header-right">
+			<input type="text" />
+			<span class="font-icon"></span>
+			<span class="header-login">登录</span>
+		</div>
+	</header>
+
+	<!-- 主体 -->
+	<div id="main-wrapper">
+		<!-- 内容区 -->
+		<div id="main">
+			<div class="row">
+				<!-- 模块一 -->
+				<div class="module-1">
+					<ul class="breadcrumb">
+						<li class="item"><a href="#">C站</a></li>
+						<li class="item"><a href="#">个人报表</a></li>
+						<li class="item"><a href="#">文件二</a></li>
+						<li class="item"><a href="#">文档一</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row row-2">
+				<!-- 模块二 -->
+				<div class="module-2">
+					<div class="col col-1">
+						<label for="#search-list" class="label-text">查询项</label>
+						<select name="search-list" id="search-list">
+							<option value="search-1" class="search-item control-text" selected="selected">第一项</option>
+							<option value="search-2" class="search-item control-text">第二项</option>
+							<option value="search-3" class="search-item control-text">第三项</option>
+							<option value="search-3" class="search-item control-text">第四项</option>
+						</select>
+					</div>
+					<div class="col col-2">
+
+					</div>
+					<div class="col col-3"></div>
+					<div class="col col-4"></div>
+				</div>
+			</div>
+			<div class="row row-3">
+				<!-- 模块三 -->
+				<div class="module-3"></div>
+			</div>
+			<div class="row row-4">
+				<!-- 模块四 -->
+				<div class="module-4"></div>
+			</div>
+			<div class="row row-5">
+				<!-- 模块五 -->
+				<div class="module-5"></div>
+
+				<!-- 模块六 -->
+				<div class="module-6"></div>
+			</div>
+			<div class="row row-6">
+				<!-- 模块七 -->
+				<div class="module-7"></div>
+
+				<!-- 模块八 -->
+				<div class="module-8"></div>
+			</div>
+		</div>
+	</div>
+
+		<!-- 左侧栏 -->
+		<div id="sidebar">
+			<!-- 个人信息 -->
+			<div class="personal">
+				<div class="personal-info">
+					<img class="personal-head" src="imges/head.jpg" alt="个人头像">
+					<span class="personal-name">April</span>
+				</div>
+				<div class="personal-favourite">
+					<div class="presonal-collect">
+						<p class="personal-collect-num">110</p>
+						<p class="personal-favourite-text">收藏</p>
+					</div>
+					<div class="personal-fan">
+						<p class="personal-fan-num">313</p>
+						<p class="personal-favourite-text">粉丝</p>
+					</div>
+				</div>
+			</div>
+			<!-- 设置 -->
+			<ul class="setting">
+				<li class="setting-item active">
+					<span class="setting-name">个人报表</span>
+					<ul class="setting-sub">
+						<li class="setting-sub-item">
+							<span class="setting-name">文件一</span>
+						</li>
+						<li class="setting-sub-item active">
+							<span class="setting-name">文件二</span>
+							<ul class="setting-sub">
+								<li class="setting-sub-item active">
+									<span class="setting-name">文档1</span>
+								</li>
+								<li class="setting-sub-item">
+									<span class="setting-name">文档2</span>
+								</li>
+							</ul>
+						</li>
+						<li class="setting-sub-item">
+							<span class="setting-name">文件三</span>
+						</li>
+					</ul>
+				</li>
+				<li class="setting-item"><span class="setting-name">个人收藏</span></li>
+				<li class="setting-item"><span class="setting-name">我的分享</span></li>
+				<li class="setting-item"><span class="setting-name">图库</span></li>
+				<li class="setting-item"><span class="setting-name">成长记录</span></li>
+				<li class="setting-item"><span class="setting-name">账户信息</span></li>
+			</ul>
+		</div>
+</body>
+</html>

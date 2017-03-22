@@ -1,0 +1,281 @@
+@charset "utf8";
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+	margin: 0px;
+	padding: 0px;
+}
+ul, ol, li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+body {
+	min-width: 1280px;
+	min-height: 1266px;
+}
+
+/* common */
+.row-2, .row-3, .row-4, .row-5, .row-6 {
+	width: 891px;
+	margin: 0px auto;
+}
+.row::before, .row::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* header */
+#header {
+	width: 100%;
+	height: 57px;
+	line-height: 57px;
+	background-color: #2189bf;
+}
+#logo {
+	display: inline-block;
+	float: left;
+	width: 36px;
+	height: 36px;
+	margin-top: calc((57px - 36px) / 2);
+	margin-left: 50px;
+	background: url(../imges/logo.png) no-repeat center center;
+}
+.header-right {
+	display: inline-block;
+	float: right;
+	margin-right: 10%;
+}
+#header input[type=text] {
+	width: 313px;
+	height: 28px;
+	border-radius: 28px;
+	border: 1px solid #aaa;
+	text-indent: 30px;
+	font-size: 12px;
+	color: #666;
+}
+.header-right .header-login {
+	font-size: 12px;
+	font-family: "Adobe Heiti Std";
+	color: #fff;
+	line-height: 2.25;
+}
+
+
+/* main-wrapper */
+#main-wrapper {
+	float: left;
+	width: 100%;
+}
+
+/* main */
+#main {
+	height: 1213px;
+	margin-left: 261px;
+	background-color: #eeeeed;
+}
+
+/* module1 */
+.module-1 {
+	width: 100%;
+	height: 31px;
+	line-height: 31px;
+	background-color: #fff;
+}
+.module-1 .breadcrumb {
+}
+.module-1 .breadcrumb .item {
+	float: left;
+	padding-left: 10px;
+}
+.module-1 .breadcrumb .item::before {
+	content: "/";
+	padding-right: 10px;
+	font-size: 12.278px;
+	font-family: "SimHei";
+	color: #aaaaaa;
+}
+.module-1 .breadcrumb .item:first-child::before {
+	content: "";
+}
+.module-1 .breadcrumb .item a {
+	font-size: 12.278px;
+	font-family: "SimHei";
+	color: #aaaaaa;
+}
+.module-1 .breadcrumb .item:last-child a {
+	color: #6898c2;
+}
+
+/* module2 */
+.module-2 {
+	display: flex;
+	width: 891px;
+	height: 86px;
+	margin: 20px auto 0px;
+	background-color: #fff;
+}
+.module-2 col {
+}
+.module-2 .label-text {
+	font-size: 12px;
+	font-family: "SimHei";
+	line-height: 2.167;
+	color:#323333;
+}
+.module-2 .control-text {
+	font-size: 12px;
+	font-family: "SimHei";
+	line-height: 2.167;
+	color: #aaa;
+}
+#search-list {
+	width: 71px;
+	height: 26px;
+}
+
+/* module3 */
+.module-3 {
+	width: 891px;
+	height: 65px;
+	margin: 11px auto 0px;
+	background-color: #fff;
+}
+
+/* module4 */
+.module-4 {
+	width: 891px;
+	height: 88px;
+	margin: 22px auto 0px;
+	background-color: #fff;
+}
+
+/* module5 */
+.module-5 {
+	width: 531px;
+	height: 356px;
+	float: left;
+	margin-top: 14px;
+	background-color: #fff;
+}
+
+/* module6 */
+.module-6 {
+	width: 351px;
+	height: 356px;
+	float: right;
+	margin-top: 14px;
+	background-color: #fff;
+}
+
+/* module7 */
+.module-7 {
+	width: 351px;
+	height: 356px;
+	float: left;
+	margin-top: 9px;
+	background-color: #fff;
+}
+
+/* module8 */
+.module-8 {
+	width: 531px;
+	height: 356px;
+	float: right;
+	margin-top: 9px;
+	background-color: #fff;
+}
+
+/* sidebar */
+#sidebar {
+	float: left;
+	width: 261px;
+	height: 1213px;
+	margin-left: -100%;
+	background-color: #2a2e3d;
+}
+.personal {
+	height: 152px;
+}
+.personal .personal-info {
+	height: 101px;
+	line-height: 101px;
+	text-align: center;
+}
+.personal .personal-info .personal-head {
+	margin-right: 15%;
+	margin-left: -15%;
+	padding: 5px;
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+	border: 2px solid #aaa;
+	vertical-align: middle;
+}
+.personal .personal-info .personal-name {
+	line-height: 1.281;
+	vertical-align: middle;
+	font-size: 16px;
+	font-family: "SimHei";
+	color: #f6f5f5;
+}
+.personal .personal-favourite {
+	display: table;
+	width: 100%;
+	height: 30px;
+}
+.personal-favourite .presonal-collect, .personal-favourite .personal-fan {
+	display: table-cell;
+	padding: 0px 30px;
+}
+.personal-favourite .presonal-collect {
+	text-align: right;
+	border-right: 1px solid #383d4e;
+}
+.personal-favourite-text {
+	font-size: 12px;
+	font-family: "SimSun";
+	color: #6e8095;
+	line-height: 1.08;
+}
+.personal-collect-num, .personal-fan-num {
+	font-size: 16px;
+	font-family: "SimHei";
+	color: #6e8095;
+	line-height: 1.125;
+}
+.setting {
+	margin: 14px 0px;
+}
+.setting .setting-item, .setting-sub .setting-sub-item {
+	margin: -12px 0px;
+	padding-left: 46px;
+	font-size: 12px;
+	font-family: "SimHei";
+	color: #6e8095;
+	line-height: 4;
+	text-align: left;
+}
+.setting .setting-item {
+}
+/* 第一级列表项 */
+.setting>.setting-item {}
+.setting>.setting-item>.setting-name {}
+.setting>.setting-item.active {
+	height: auto;
+	color: #ededef;
+	background-color: #393e4e;
+}
+/* 第二/三级列表项 */
+.setting-sub {}
+.setting-name+.setting-sub {}
+.setting-name+.setting-sub .setting-sub-item {}
+.setting-name+.setting-sub .setting-sub-item.active {
+	height: auto;
+	color: #ededef;
+}
+.setting-name+.setting-sub .setting-sub-item .setting-name {}

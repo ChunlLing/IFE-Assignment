@@ -159,15 +159,18 @@ body {
 	position: relative;
 	right: -100%;
 	top: -50%;
-	margin-top: -19px;
+	margin-top: -21px;
 	display: block;
 	width: 28px;
 	height: 38px;
 	line-height: 38px;
-	background: url(../imges/change.png) no-repeat center center;
+	background: url(../imges/change.png) no-repeat 2px 2px;
+	text-align: right;
+}
+.module-2 .col-2 .change span {
+	cursor: pointer;
 	color: #fff;
 	font-size: 12px;
-	text-align: right;
 }
 .module-2 .col-3 .short-control {
 	width: 71px;

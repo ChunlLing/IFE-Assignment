@@ -280,9 +280,62 @@ body {
 .module-4 {
 	width: 891px;
 	height: 88px;
-	margin: 22px auto 0px;
-	background-color: #fff;
+	margin: 22px auto 14px;
 }
+.module-4 h1 {
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+	color: #323333;
+	line-height: 2.62;
+}
+.module-4 .statistics {
+	display: flex;
+	justify-content: space-between;
+}
+.module-4 .statistics .item {
+	float: left;
+	width: 201px;
+	height: 71px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+}
+.module-4 .statistics .item:nth-child(1) {
+	margin-left: 0px;
+	border-left: 4px solid #44b29e;
+}
+.module-4 .statistics .item:nth-child(2) {
+	border-left: 4px solid #398bc2;
+}
+.module-4 .statistics .item:nth-child(3) {
+	border-left: 4px solid #e2cd46;
+}
+.module-4 .statistics .item:nth-child(4) {
+	border-left: 4px solid #43b29d;
+}
+.module-4 .statistics-text {
+	position: relative;
+	font-size: 12px;
+	font-family: "SimHei";
+	color: #323333;
+	line-height: 2.051;
+	-moz-transform: scale(1.029, 1);
+	-webkit-transform: scale(1.029, 1);
+	-ms-transform: scale(1.029, 1);
+}
+.module-4 .statistics-text::after {
+	content: "成交量";
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	font-size: 10px;
+	font-family: "SimHei";
+	color: #aaaaaa;
+	line-height: 2.005;
+	-moz-transform: scale(1.029, 1);
+	-webkit-transform: scale(1.029, 1);
+	-ms-transform: scale(1.029, 1);
+}
+.module-4 .statistics-box {}
 
 /* module5 */
 .module-5 {

@@ -12,6 +12,11 @@ input[type=text] {
 	border: 1px solid #aaa;
 	box-sizing: border-box;
 }
+select {
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+}
 a {
 	text-decoration: none;
 	color: #000;
@@ -536,6 +541,74 @@ body {
 	border: 1px solid #aaa;
 	border-radius: 5px;
 	overflow: hidden;
+}
+.module-7 .project {
+	padding: 0px 20px;
+	box-sizing: border-box;
+}
+.module-7 .calendar-text {
+	font-size: 12px;
+	font-family: "SimHei";
+	color: #535353;
+	line-height: 1.2;
+	text-align: center;
+}
+.module-7 p.search {
+	margin: 10px auto;
+}
+.module-7 p.search select[name="year"] {
+	width: 64px;
+	height: 22px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+}
+.module-7 p.search select[name="month"] {
+	width: 86px;
+	height: 22px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+}
+.module-7 p.search select[name="day"] {
+	width: 76px;
+	height: 22px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+}
+.module-7 p.search button {
+	width: 63px;
+	height: 22px;
+	padding: 0px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+}
+.module-7 .calendar {
+	width: 100%;
+	text-align: center;
+	border-top: 2px solid #66a9dd;
+	border-collapse: collapse;
+}
+.module-7 .calendar thead tr {
+	height: 30px;
+	border-bottom: 1px solid #c2c3c4;
+}
+.module-7 .calendar tbody tr {
+	height: 40px;
+}
+.module-7 .calendar td.special {
+	border: 1px solid #f4c11c;
+}
+.module-7 .calendar-num {
+	font-size: 11.361px;
+	font-family: "SimHei";
+	color: #323333;
+}
+.module-7 .calendar-lunar {
+	font-size: 11.361px;
+	font-family: "SimHei";
+	color: #323333;
+}
+.module-7 .festival, .module-7 .weekend {
+	color: #c9161d;
 }
 
 /* module8 */

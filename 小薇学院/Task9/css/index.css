@@ -472,6 +472,59 @@ body {
 	border-radius: 5px;
 	overflow: hidden;
 }
+.module-6 .project {
+	padding: 12px 30px;
+	box-sizing: border-box;
+}
+.module-6 .item-title {
+	height: 24px;
+	line-height: 1.381;
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+	color: #c3c2c2;
+	text-indent: 24px;
+}
+.module-6 .project-text {
+	height: 24px;
+	line-height: 1.381;
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+	color: #535353;
+	text-indent: 24px;
+}
+.module-6 .project table {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #aaa;
+	margin-bottom: 5px;
+}
+.module-6 .project table tr {
+	border-bottom: 1px solid #aaa;
+}
+.module-6 .project table tr:first-child td:first-child {
+	border-right: 1px solid #aaa;
+}
+.module-6 .project table tr:last-child {
+	vertical-align: text-top;
+	height: 147px;
+}
+.module-6 input[type="checkbox"] {
+	vertical-align: middle;
+	line-height: 1.381;
+}
+.module-6 .search-box {
+	float: right;
+	width: 51px; 
+	height: 26px; 
+	background-color: #388ac1;
+	border-radius: 4px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: "SimHei";
+	line-height: 2.167;
+}
 
 /* module7 */
 .module-7 {

@@ -622,6 +622,91 @@ body {
 	border-radius: 5px;
 	overflow: hidden;
 }
+.module-8 .project {
+	padding: 10px 30px;
+	box-sizing: border-box;
+}
+.module-8 .brand {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #aaa;
+	text-align: center;
+}
+.module-8 .brand tr td:nth-child(1), .module-8 .brand tr td:nth-child(2) {
+	width: 68px;
+}
+.module-8 .brand tbody tr {
+	cursor: pointer;
+}
+.module-8 .brand tbody tr:hover {
+	background-color: #f4f5f7;
+}
+.module-8 .brand td {
+	height: 24px;
+	border: 1px solid #aaa;
+}
+.module-8 .brand-text {
+	font-size: 12px;
+	font-family: "SimHei";
+	color: #323333;
+	line-height: 2;
+}
+.module-8 .schedule-bar {
+	display: inline-block;
+	position: relative;
+	width: 167px;
+	height: 4px;
+	background-color: #aaa;
+	vertical-align: middle;
+}
+.schedule-bar span {
+	display: inline-block;
+	position: absolute;
+	height: 4px;
+	top: 0px;
+	left: 0px;
+}
+.schedule-bar .schedule-bar1 {
+	width: 142px;
+	background-color: #ec6d51;
+}
+.schedule-bar .schedule-bar2 {
+	width: 123px;
+	background-color: #ef8150;
+}
+.schedule-bar .schedule-bar3 {
+	width: 105px;
+	background-color: #f19e4f;
+}
+.schedule-bar .schedule-bar4 {
+	width: 98px;
+	background-color: #7fcbf0;
+}
+.schedule-bar .schedule-bar5 {
+	width: 85px;
+	background-color: #7fcbf0;
+}
+.schedule-bar .schedule-bar6 {
+	width: 81px;
+	background-color: #7fcbf0;
+}
+.schedule-bar .schedule-bar7 {
+	width: 78px;
+	background-color: #7fcbf0;
+}
+.schedule-bar .schedule-bar8 {
+	width: 66px;
+	background-color: #7fcbf0;
+}
+.schedule-bar .schedule-bar9 {
+	width: 60px;
+	background-color: #7fcbf0;
+}
+.schedule-bar .schedule-bar10 {
+	width: 54px;
+	background-color: #7fcbf0;
+}
 
 /* sidebar */
 #sidebar {

@@ -199,7 +199,81 @@ body {
 	width: 891px;
 	height: 65px;
 	margin: 11px auto 0px;
+}
+.module-3 .carousel {
+	position: relative;
+	float: left;
+}
+.module-3 .carousel-inner {
+	float: left;
+	margin-left: 35px;
+}
+.module-3 .carousel-inner .item {
+	float: left;
+	width: 111px;
+	height: 65px;
+	margin-right: 4px;
+	text-align: center;
 	background-color: #fff;
+	box-sizing: border-box;
+	border-left: 1px solid #aaa;
+	border-top: 1px solid #aaa;
+}
+.module-3 .carousel-inner .item.active {
+	border-top: 2px solid #4389c9;
+}
+.module-3 .carousel-control {
+	display: block;
+	float: left;
+	width: 31px;
+	height: 65px;
+	line-height: 65px;
+	margin-right: 4px;
+	text-align: center;
+	background-color: #fff;
+	box-sizing: border-box;
+	border-left: 1px solid #aaa;
+	border-top: 1px solid #aaa;
+}
+.module-3 .carousel-control.left {
+	position: absolute;
+	left: 0px;
+}
+.module-3 p.time {
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+	color: #323333;
+}
+.module-3 p.money {
+	height: 32px;
+	line-height: 32px;
+}
+.module-3 .money-num {
+	font-size: 21px;
+	font-family: "Microsoft YaHei";
+	color:#ec6500;
+	line-height: 0.686;
+	-moz-transform: scale(0.949, 1);
+	-webkit-transform: scale(0.949, 1);
+	-ms-transform: scale(0.949, 1);
+}
+.module-3 .history {
+	float: right;
+	width: 131px;
+	height: 65px;
+	line-height: 65px;
+	background-color: #fff;
+	box-sizing: border-box;
+	border-left: 1px solid #aaa;
+	border-top: 1px solid #aaa;
+	text-align: center;
+}
+.module-3 .history-text {
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+	color: #535353;
 }
 
 /* module4 */

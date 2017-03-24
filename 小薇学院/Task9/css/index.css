@@ -12,11 +12,6 @@ input[type=text] {
 	border: 1px solid #aaa;
 	box-sizing: border-box;
 }
-select {
-	appearance:none;
-	-moz-appearance:none;
-	-webkit-appearance:none;
-}
 a {
 	text-decoration: none;
 	color: #000;
@@ -71,6 +66,7 @@ body {
 #header input[type=text] {
 	width: 313px;
 	height: 28px;
+	margin-right: 20px;
 	border-radius: 28px;
 	border: 1px solid #aaa;
 	text-indent: 30px;
@@ -82,6 +78,16 @@ body {
 	font-family: "Adobe Heiti Std";
 	color: #fff;
 	line-height: 2.25;
+}
+.header-right .icon-search {
+	position: relative;
+	right: -30px;
+	vertical-align: middle;
+	color: #aaa;
+}
+.header-right span.icon-login {
+	color: #fff;
+	vertical-align: middle;
 }
 
 
@@ -208,6 +214,14 @@ body {
 	color: #fff;
 	cursor: pointer;
 }
+.module-2 input[type="text"]::after, .module-2 select::after {
+	content: "&#xe902;";
+	position: relative;
+	left: 20px;
+	display: inline;
+	vertical-align: middle;
+	color: #aaa;
+}
 
 /* module3 */
 .module-3 {
@@ -250,6 +264,10 @@ body {
 	border-left: 1px solid #aaa;
 	border-top: 1px solid #aaa;
 }
+.module-3 .carousel-control span {
+	font-size: 18px;
+	color: #aaa;
+}
 .module-3 .carousel-control.left {
 	position: absolute;
 	left: 0px;
@@ -289,6 +307,14 @@ body {
 	font-size: 12px;
 	font-family: "Microsoft YaHei";
 	color: #535353;
+}
+.module-3 span.icon-rmb {
+	color: #aaa;
+}
+.module-3 span.icon-calendar {
+	font-size: 48px;
+	vertical-align: middle;
+	color: #2189bf;
 }
 
 /* module4 */
@@ -772,13 +798,19 @@ body {
 .setting .setting-item, .setting-sub .setting-sub-item {
 	margin: -12px 0px;
 	padding-left: 46px;
-	font-size: 12px;
-	font-family: "SimHei";
 	color: #6e8095;
 	line-height: 4;
 	text-align: left;
 }
 .setting .setting-item {
+}
+.setting .setting-name {
+	margin-left: 5px;
+	font-size: 12px;
+	font-family: "SimHei";
+}
+.setting span {
+	vertical-align: middle;
 }
 /* 第一级列表项 */
 .setting>.setting-item {}

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>任务九：使用HTML/CSS实现一个复杂页面</title>
+	<link rel="stylesheet" type="text/css" href="../../lib/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
@@ -10,8 +11,9 @@
 	<header id="header">
 		<a id="logo" href="#"></a>
 		<div class="header-right">
+			<span class="icon-search"></span>
 			<input type="text" />
-			<span class="login-icon"></span>
+			<span class="icon-login"></span>
 			<span class="header-login">登录</span>
 		</div>
 	</header>
@@ -96,51 +98,51 @@
 							<li class="item active">
 								<p class="time">10:00 am</p>
 								<p class="money">
-									<span class="money-icon"></span>
+									<span class="icon-rmb"></span>
 									<span class="money-num">1200</span>
 								</p>
 							</li>
 							<li class="item">
 								<p class="time">11:00 am</p>
 								<p class="money">
-									<span class="money-icon"></span>
+									<span class="icon-rmb"></span>
 									<span class="money-num">1300</span>
 								</p>
 							</li>
 							<li class="item">
 								<p class="time">12:00 am</p>
 								<p class="money">
-									<span class="money-icon"></span>
+									<span class="icon-rmb"></span>
 									<span class="money-num">1200</span>
 								</p>
 							</li>
 							<li class="item">
 								<p class="time">01:00 am</p>
 								<p class="money">
-									<span class="money-icon"></span>
+									<span class="icon-rmb"></span>
 									<span class="money-num">1400</span>
 								</p>
 							</li>
 							<li class="item">
 								<p class="time">02:00 am</p>
 								<p class="money">
-									<span class="money-icon"></span>
+									<span class="icon-rmb"></span>
 									<span class="money-num">1500</span>
 								</p>
 							</li>
 							<li class="item">
 								<p class="time">03:00 am</p>
 								<p class="money">
-									<span class="money-icon"></span>
+									<span class="icon-rmb"></span>
 									<span class="money-num">1800</span>
 								</p>
 							</li>
 						</ol>
-						<a href="" class="carousel-control left">&lt;</a>
-						<a href="" class="carousel-control right">&gt;</a>
+						<a href="" class="carousel-control left"><span class="icon-left"></span></a>
+						<a href="" class="carousel-control right"><span class="icon-right"></span></a>
 					</div>
 					<div class="history">
-						<span class="history-icon"></span>
+						<span class="icon-calendar"></span>
 						<span class="history-text">历史查询</span>
 					</div>
 				</div>
@@ -580,32 +582,53 @@
 			<!-- 设置 -->
 			<ul class="setting">
 				<li class="setting-item active">
+					<span class="icon-folder"></span>
 					<span class="setting-name">个人报表</span>
 					<ul class="setting-sub">
 						<li class="setting-sub-item">
+							<span class="icon-file"></span>
 							<span class="setting-name">文件一</span>
 						</li>
 						<li class="setting-sub-item active">
+							<span class="icon-file"></span>
 							<span class="setting-name">文件二</span>
 							<ul class="setting-sub">
 								<li class="setting-sub-item active">
+									<span class="icon-paper"></span>
 									<span class="setting-name">文档1</span>
 								</li>
 								<li class="setting-sub-item">
+									<span class="icon-paper"></span>
 									<span class="setting-name">文档2</span>
 								</li>
 							</ul>
 						</li>
 						<li class="setting-sub-item">
+							<span class="icon-file"></span>
 							<span class="setting-name">文件三</span>
 						</li>
 					</ul>
 				</li>
-				<li class="setting-item"><span class="setting-name">个人收藏</span></li>
-				<li class="setting-item"><span class="setting-name">我的分享</span></li>
-				<li class="setting-item"><span class="setting-name">图库</span></li>
-				<li class="setting-item"><span class="setting-name">成长记录</span></li>
-				<li class="setting-item"><span class="setting-name">账户信息</span></li>
+				<li class="setting-item">
+					<span class="icon-star"></span>
+					<span class="setting-name">个人收藏</span>
+				</li>
+				<li class="setting-item">
+					<span class="icon-share"></span
+					><span class="setting-name">我的分享</span>
+				</li>
+				<li class="setting-item">
+					<span class="icon-star"></span>
+					<span class="setting-name">图库</span>
+				</li>
+				<li class="setting-item">
+					<span class="icon-star"></span>
+					<span class="setting-name">成长记录</span>
+				</li>
+				<li class="setting-item">
+					<span class="icon-info"></span>
+					<span class="setting-name">账户信息</span>
+				</li>
 			</ul>
 		</div>
 </body>

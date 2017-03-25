@@ -72,9 +72,11 @@ window.onload = function () {
 
 	// 生成节点
 	function createNode(h) {
+		var pre = document.createElement('pre');
 		var p = document.createElement('p');
 		p.innerText = h;
-		return p;
+		pre.append(p);
+		return pre;
 	}
 
 	// 清除所有子节点

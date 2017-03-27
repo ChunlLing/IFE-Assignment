@@ -1,0 +1,46 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+p, label, input, button {
+	font-size: 14px;
+}
+
+form {
+	width: 80%;
+	margin: 30px auto;
+	padding: 30px 20px;
+	border: 1px solid #ccc;
+}
+
+label {
+	display: inline-block;
+	width: 10%;
+}
+
+input {
+	width: 70%;
+	height: 30px;
+}
+
+button {
+	width: 10%;
+}
+
+p {
+	display: none;
+	margin: 5px 0 5px 11%;
+}
+
+p.info {
+	color: #ccc;
+}
+
+p.error {
+	color: #900;
+}
+
+p.success {
+	color: #090;
+}

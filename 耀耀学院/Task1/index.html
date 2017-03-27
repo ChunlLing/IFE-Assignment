@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>任务一：表单（一）单个表单项的检验</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<form action="123.html" method="get">
+		<filedset>
+			<label for="name">名称</label>
+			<input type="text" id="name" name="name">
+			<button type="button">验证</button>
+		</filedset>
+			<p class="info">必填，长度为4-16个字符</p>
+			<p class="error">名称不能为空</p>
+			<p class="success">名称格式正确</p>
+	</form>
+</body>
+</html>

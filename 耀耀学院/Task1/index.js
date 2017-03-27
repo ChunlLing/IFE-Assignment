@@ -9,7 +9,7 @@ window.onload = function () {
 		text = name.value;
 		if (text == '') {
 			showMsg('error');
-		} else if (text.length > 16 || text.length < 4) {
+		} else if (strLength(text) > 16 || strLength(text) < 4) {
 			showMsg('info');
 		} else {
 			showMsg('success');
@@ -24,5 +24,24 @@ window.onload = function () {
 				msg[i].style.display = 'none';
 			}
 		}
+	}
+
+	// 判断是否为中文字符
+	function isCh(c) {
+		return c.codePointAt(0) > 0xFF;
+	}
+
+	// 记录字符串长度
+	function strLength(str) {
+		var l = 0;
+		for (var ch of str) {
+			if (isCh(ch)) {
+				console.log(l);
+				l += 2;
+			} else {
+				l += 1;
+			}
+		}
+		return l;
 	}
 };

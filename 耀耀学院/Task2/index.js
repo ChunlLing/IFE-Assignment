@@ -10,7 +10,7 @@ window.onload = function () {
 
 	name.addEventListener('focus', function () {
 		addClass(this, 'info');
-		this.nextSibling.nextSibling.innerText = '必填，长度为4-16个字符';
+		this.nextElementSibling.innerText = '必填，长度为4-16个字符';
 	}, false);
 
 	name.addEventListener('blur', function () {
@@ -18,19 +18,19 @@ window.onload = function () {
 		removeClass(this);		
 		if (text == '') {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '名称不能为空';
+			this.nextElementSibling.innerText = '名称不能为空';
 		} else if (strLength(text) > 16 || strLength(text) < 4) {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '长度必须在4-16个字符之间';
+			this.nextElementSibling.innerText = '长度必须在4-16个字符之间';
 		} else {
 			addClass(this, 'success');
-			this.nextSibling.nextSibling.innerText = '格式正确';
+			this.nextElementSibling.innerText = '格式正确';
 		}
 	}, false);
 
 	pass.addEventListener('focus', function () {
 		addClass(this, 'info');
-		this.nextSibling.nextSibling.innerText = '必填，长度为4-16个字符';
+		this.nextElementSibling.innerText = '必填，长度为4-16个字符';
 	}, false);
 
 	pass.addEventListener('blur', function () {
@@ -38,19 +38,19 @@ window.onload = function () {
 		removeClass(this);		
 		if (text == '') {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '密码不能为空';
+			this.nextElementSibling.innerText = '密码不能为空';
 		} else if (strLength(text) > 16 || strLength(text) < 4) {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '长度必须在4-16个字符之间';
+			this.nextElementSibling.innerText = '长度必须在4-16个字符之间';
 		} else {
 			addClass(this, 'success');
-			this.nextSibling.nextSibling.innerText = '格式正确';
+			this.nextElementSibling.innerText = '格式正确';
 		}
 	}, false);
 
 	notPass.addEventListener('focus', function () {
 		addClass(this, 'info');
-		this.nextSibling.nextSibling.innerText = '必填，长度为4-16个字符';
+		this.nextElementSibling.innerText = '必填，长度为4-16个字符';
 	}, false);
 
 	notPass.addEventListener('blur', function () {
@@ -59,19 +59,19 @@ window.onload = function () {
 		removeClass(this);
 		if (text !== password) {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '两次密码不一致';
+			this.nextElementSibling.innerText = '两次密码不一致';
 		} else if (text == '') {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '输入不得为空';
+			this.nextElementSibling.innerText = '输入不得为空';
 		} else {
 			addClass(this, 'success');
-			this.nextSibling.nextSibling.innerText = '格式正确';
+			this.nextElementSibling.innerText = '格式正确';
 		}
 	}, false);
 
 	email.addEventListener('focus', function () {
 		addClass(this, 'info');
-		this.nextSibling.nextSibling.innerText = '必填，邮箱格式为xxx@xxx.com';
+		this.nextElementSibling.innerText = '必填，邮箱格式为xxx@xxx.com';
 	}, false);
 
 	email.addEventListener('blur', function () {
@@ -79,19 +79,19 @@ window.onload = function () {
 		removeClass(this);		
 		if (text == '') {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '邮箱不能为空';
+			this.nextElementSibling.innerText = '邮箱不能为空';
 		} else if (text.indexOf('@') == -1) {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '邮箱格式不正确';
+			this.nextElementSibling.innerText = '邮箱格式不正确';
 		} else {
 			addClass(this, 'success');
-			this.nextSibling.nextSibling.innerText = '格式正确';
+			this.nextElementSibling.innerText = '格式正确';
 		}
 	}, false);
 
 	mobile.addEventListener('focus', function () {
 		addClass(this, 'info');
-		this.nextSibling.nextSibling.innerText = '必填，号码为11位数字';
+		this.nextElementSibling.innerText = '必填，号码为11位数字';
 	}, false);
 
 	mobile.addEventListener('blur', function () {
@@ -99,13 +99,13 @@ window.onload = function () {
 		removeClass(this);
 		if (isNaN(text)) {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '请输入数字';
+			this.nextElementSibling.innerText = '请输入数字';
 		} else if (text.length !== 11) {
 			addClass(this, 'error');
-			this.nextSibling.nextSibling.innerText = '请输入11位数字';
+			this.nextElementSibling.innerText = '请输入11位数字';
 		} else {
 			addClass(this, 'success');
-			this.nextSibling.nextSibling.innerText = '格式正确';
+			this.nextElementSibling.innerText = '格式正确';
 		}
 	}, false);
 

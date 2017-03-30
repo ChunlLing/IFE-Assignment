@@ -38,6 +38,7 @@ input {
 	border-radius: 5px;
 	border: 1px solid #ccc;
 	outline: none;
+	background-color: #fff;
 }
 
 input + span {
@@ -55,6 +56,7 @@ button {
 
 input.success {
 	border-color: #090;
+	background-color: #fff;
 }
 span.success {
 	color: #090;

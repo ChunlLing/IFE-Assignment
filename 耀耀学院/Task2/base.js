@@ -85,6 +85,14 @@ Base.prototype.text = function (content) {
 	return this;
 };
 
+// 清除空格
+Base.prototype.trim = function () {
+	for (let i = 0; i < this.elements.length; i++) {
+		this.elements[i].innerText = this.elements[i].innerText.trim();
+	}
+	return this;
+};
+
 // 表单值
 Base.prototype.value = function (content) {
 	for (let i = 0; i < this.elements.length; i++) {

@@ -24,6 +24,14 @@ Base.prototype.length = function () {
 	return this.elements.length;
 };
 
+// 获取上一个节点对象
+Base.prototype.prev = function () {
+	for (let i = 0; i <this. elements.length; i++) {
+		this.elements[i] = this.elements[i].prevElementSibling;
+	}
+	return this;
+};
+
 // 获取下一个节点对象
 Base.prototype.next = function () {
 	for (let i = 0; i <this. elements.length; i++) {

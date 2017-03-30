@@ -4,19 +4,24 @@ var $ = function (args) {
 };
 
 // 基础库
-function Base(selector) {
+function Base(args) {
 	this.elements = [];
-	switch (selector.charAt(0)) {
-		case '#' :
-			this.elements.push(document.getElementById(selector.substring(1)));
-			break;
-		case '.' :
-			this.elements = (document.getElementsByClassName(selector.substring(1)));
-			break;
-		default :
-			this.elements = document.getElementsByTagName(selector);
+	if (typeof args == 'string') {		
+		// 传入的参数是字符串
+		switch (args.charAt(0)) {
+			case '#' :
+				this.elements.push(document.getElementById(args.substring(1)));
+				break;
+			case '.' :
+				this.elements = (document.getElementsByClassName(args.substring(1)));
+				break;
+			default :
+				this.elements = document.getElementsByTagName(args);
+		}
+	} else {
+		// 传入的参数是this
+		this.elements[0] = args;
 	}
-	return this;
 }
 
 // 获取节点的数量

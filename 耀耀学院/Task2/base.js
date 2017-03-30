@@ -47,3 +47,11 @@ Base.prototype.bind = function (type, fn) {
 	}
 	return this;
 };
+
+// 添加class
+Base.prototype.addClass = function (cn) {
+	for (let i = 0; i < this.elements.length; i++) {
+		this.elements[i].className += ' ' + cn;
+	}
+	return this;
+};

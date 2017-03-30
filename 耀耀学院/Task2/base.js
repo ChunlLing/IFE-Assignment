@@ -67,3 +67,15 @@ Base.prototype.removeClass = function (cn) {
 	}
 	return this;
 };
+
+// 文本内容
+Base.prototype.text = function (content) {
+	for (let i = 0; i < this.elements.length; i++) {
+		if (arguments.length == 0) {
+			return this.elements[i].innerText;
+		} else {
+			this.elements[i].innerText = content;
+		}
+	}
+	return this;
+};

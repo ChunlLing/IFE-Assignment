@@ -55,3 +55,15 @@ Base.prototype.addClass = function (cn) {
 	}
 	return this;
 };
+
+// 移除class
+Base.prototype.removeClass = function (cn) {
+	for (let i = 0; i < this.elements.length; i++) {
+		if (arguments.length == 0) {
+			this.elements[i].removeAttribute('class');
+		} else {
+			this.elements[i].className = this.elements[i].className.replace(cn, '');
+		}
+	}
+	return this;
+};

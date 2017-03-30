@@ -1,11 +1,11 @@
 window.onload = function () {
+	var text;
+
 	$('#name').bind('focus', function () {
-		$('#name').addClass('info');
-		$('#name').addClass('123');
-		$().next().text('必填');
-		console.log($('#name').next().text());
-		$('#name').next().addClass('info');
+		$(this).addClass('info');
+		$(this).next().text('必填，长度为4-16个字符');
 	}).bind('blur', function () {
-		$('#name').removeClass();
+		$(this).removeClass().value('12');
+		console.log($(this).value());
 	});
 };

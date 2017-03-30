@@ -84,3 +84,15 @@ Base.prototype.text = function (content) {
 	}
 	return this;
 };
+
+// 表单值
+Base.prototype.value = function (content) {
+	for (let i = 0; i < this.elements.length; i++) {
+		if (arguments.length == 0) {
+			return this.elements[i].value;
+		} else {
+			this.elements[i].value = content;
+		}
+	}
+	return this;
+};

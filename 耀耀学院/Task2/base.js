@@ -18,3 +18,16 @@ function Base(selector) {
 	}
 	return this;
 }
+
+// 获取节点的数量
+Base.prototype.length = function () {
+	return this.elements.length;
+};
+
+// 事件绑定
+Base.prototype.bind = function (type, fn) {
+	for (let i = 0; i < this.elements.length; i++) {
+		this.elements[i].addEventListener(type, fn, false);
+	}
+	return this;
+};

@@ -40,11 +40,15 @@ window.onload = function () {
 		for (var i = 0; i < cArr.length; i++) {
 			city.options[i].text = cArr[i];
 		}
+		school.length = sArr[0].length;
+		for (var i = 0; i < sArr[0].length; i++) {
+			school.options[i].text = sArr[0][i];
+		}
 	}
 
 	function schoolInit(index) {
 		school.length = sArr[index].length;
-		for (var i = 0; i < sArr.length; i++) {
+		for (var i = 0; i < sArr[index].length; i++) {
 			school.options[i].text = sArr[index][i];
 		}
 	}

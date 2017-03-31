@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>任务三：表单（三）联动</title>
+	<style type="text/css">
+		form {
+			width: 90%;
+			margin: 20px auto;
+		}
+		span {
+			display: inline-block;
+			width: 20%;
+		}
+		label {
+			display: inline-block;
+			width: 30%;
+			height: 30px;
+			line-height: 30px;
+		}
+		select {
+			display: inline-block;
+			width: 20%;
+			height: 28px;
+			line-height: 28px;
+		}
+		select:last-child {
+			width: 45%;
+			margin-left: 5%;
+		}
+		input[type="text"] {
+			display: inline-block;
+			width: 70%;
+			height: 28px;
+			line-height: 28px;
+			padding: 0px;
+			border: 1px solid #aaa;
+		}
+		p:not(:first-child) {
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<form>
+		<p>
+			<span>你的身份</span>
+			<label for="student"><input type="radio" id="student" class="student" name="identity" />在校生</label>
+			<label for="worker"><input type="radio" id="worker" name="identity" />非在校生</label>
+		</p>
+		<p id="stuInfo">
+			<span>学校</span>
+			<select id="city" name="city">
+			</select>
+			<select id="school" name="school">
+			</select>
+		</p>
+		<p id="worInfo">
+			<span>就业单位</span>
+			<input type="text" name="employment" />
+		</p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	position: relative;
+	width: 400px;
+	margin: 20px auto;
+}
+
+.grid {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	border: 1px solid #000;
+}
+
+.item {
+	float: left;
+	width: 40px;
+	height: 40px;
+	box-sizing: border-box;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.box {
+	position: absolute;
+	top: 160px;
+	left: 160px;
+	width: 40px;
+	height: 40.0px;
+	box-sizing: border-box;
+	background-color: #900;
+}
+.box::before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 12px;
+	background-color: #009;
+}
+
+.control {
+	position: relative;
+	width: 300px;
+	height: 120px;
+	margin: 0px auto;
+}
+
+.button {
+	position: absolute;
+	width: 70px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.go {
+	top: 0px;
+	left: 50%;
+	margin-left: -35px;
+}
+
+.t-l {
+	top: 50%;
+	left: 0px;
+	margin-top: -15px;
+}
+
+.t-r {
+	top: 50%;
+	right: 0px;
+	margin-top: -15px;
+}
+
+.t-b {
+	bottom: 0px;
+	left: 50%;
+	margin-left: -35px;
+}

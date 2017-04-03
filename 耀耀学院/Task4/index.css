@@ -58,6 +58,14 @@ body {
 	background-color: #fff;
 }
 
+#command {
+	height: 28px;
+	margin-right: 40px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	text-indent: 12px;
+}
+
 .go {
 	top: 0px;
 	left: 50%;

@@ -63,10 +63,12 @@ window.onload = function () {
 	});
 
 	$('#com-btn').bind('click', function () {
-		alert($('#command').value());
+		var command = $('#command').value();
+		rotate(command);
+
 	});
 
-	function rotate($obj, direction) {
+	function rotate(direction) {
 		if (direction == 'right') {
 			angle += 90;
 		} else if (direction == 'back') {
@@ -74,6 +76,50 @@ window.onload = function () {
 		} else if (direction == 'left') {
 			angle += 270;
 		}
-		$obj.css('transform', 'rotate(' + angle + 'deg)');
+		$('.box').css('transform', 'rotate(' + angle + 'deg)');
+
+		if (direction == 'go') {
+			
+		var posX = parseInt($('.box').left());
+		var posY = parseInt($('.box').top());
+
+		angle %= 360;
+
+		if (angle == 0) {
+			dir = 0;
+		} else if (angle == 90) {
+			dir = 1;
+		} else if (angle == 180) {
+			dir = 2;
+		} else if (angle == 270) {
+			dir = 3;
+		}
+
+		if (dir == 0) {
+			if (posY > 0 && posY <= 360) {
+				$('.box').top( posY - step + 'px');
+			} else {
+				alert('ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~');
+			}
+		} else if (dir == 1) {
+			if (posX >= 0 && posX < 360) {
+				$('.box').left( posX + step + 'px');
+			} else {
+				alert('ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~');
+			}
+		} else if (dir == 2) {
+			if (posY >= 0 && posY < 360) {
+				$('.box').top( posY + step + 'px');
+			} else {
+				alert('ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~');
+			}
+		} else if (dir == 3) {
+			if (posX > 0 && posX <= 360) {
+				$('.box').left( posX - step + 'px');
+			} else {
+				alert('ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~');
+			}
+		}
+		}
 	}
 };

@@ -11,11 +11,6 @@ window.onload = function () {
 		var posX = parseInt($('.box').left());
 		var posY = parseInt($('.box').top());
 
-		console.log('dir : ' + dir);
-		console.log('angle : ' + angle);
-		console.log('posX : ' + posX);
-		console.log('posY : ' + posY);
-
 		angle %= 360;
 
 		if (angle == 0) {
@@ -28,39 +23,31 @@ window.onload = function () {
 			dir = 3;
 		}
 
-		console.log('dir1 : ' + dir);
-		console.log('angle1 : ' + angle);
-
 		if (dir == 0) {
 			if (posY > 0 && posY <= 360) {
 				$('.box').top( posY - step + 'px');
 			} else {
-		console.log('posY1 : ' + posY);
 				alert('ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~');
 			}
 		} else if (dir == 1) {
 			if (posX >= 0 && posX < 360) {
 				$('.box').left( posX + step + 'px');
 			} else {
-		console.log('posX1 : ' + posX);
 				alert('ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~');
 			}
 		} else if (dir == 2) {
 			if (posY >= 0 && posY < 360) {
 				$('.box').top( posY + step + 'px');
 			} else {
-		console.log('posY1 : ' + posY);
 				alert('ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~');
 			}
 		} else if (dir == 3) {
 			if (posX > 0 && posX <= 360) {
 				$('.box').left( posX - step + 'px');
 			} else {
-		console.log('posX1 : ' + posX);
 				alert('ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~');
 			}
 		}
-		console.log('\n');
 	});
 	$('.t-r').bind('click', function () {
 		angle += 90;
@@ -74,4 +61,19 @@ window.onload = function () {
 		angle += 270;
 		$('.box').css('transform', 'rotate(' + angle + 'deg)');
 	});
+
+	$('#com-btn').bind('click', function () {
+		alert($('#command').value());
+	});
+
+	function rotate($obj, direction) {
+		if (direction == 'right') {
+			angle += 90;
+		} else if (direction == 'back') {
+			angle += 180;
+		} else if (direction == 'left') {
+			angle += 270;
+		}
+		$obj.css('transform', 'rotate(' + angle + 'deg)');
+	}
 };

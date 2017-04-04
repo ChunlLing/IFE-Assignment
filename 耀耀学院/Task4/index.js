@@ -35,7 +35,7 @@ window.onload = function () {
 			angle += 180;
 		} else if (direction.toUpperCase() == 'TUN LEF') {
 			// 向左转
-			angle -= 270;
+			angle += 270;
 		}
 		$('.box').css('transform', 'rotate(' + angle + 'deg)');
 
@@ -80,4 +80,5 @@ window.onload = function () {
 			}
 		}
 	}
+
 };

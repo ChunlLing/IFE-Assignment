@@ -6,7 +6,7 @@ body {
 .container {
 	position: relative;
 	width: 400px;
-	margin: 20px auto;
+	margin: 20px 80px;
 }
 
 .grid {
@@ -33,7 +33,7 @@ body {
 	height: 40.0px;
 	box-sizing: border-box;
 	background-color: #900;
-	transition: 1s;
+	transition-duration: 1s;
 }
 .box::before {
 	content: "";

@@ -69,16 +69,16 @@ window.onload = function () {
 	});
 
 	function rotate(direction) {
-		if (direction == 'right') {
+		if (direction.toUpperCase() == 'TUN RIG') {
 			angle += 90;
-		} else if (direction == 'back') {
+		} else if (direction.toUpperCase() == 'TUN BAC') {
 			angle += 180;
-		} else if (direction == 'left') {
+		} else if (direction.toUpperCase() == 'TUN LEF') {
 			angle += 270;
 		}
 		$('.box').css('transform', 'rotate(' + angle + 'deg)');
 
-		if (direction == 'go') {
+		if (direction.toUpperCase() == 'GO') {
 			
 		var posX = parseInt($('.box').left());
 		var posY = parseInt($('.box').top());

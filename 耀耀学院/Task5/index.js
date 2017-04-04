@@ -62,7 +62,7 @@ window.onload = function () {
 			case 'TRA RIG' : move('r'); break;
 			case 'TRA BAC' : move('b'); break;
 			case 'TRA LEF' : move('l'); break;
-			case 'MOV TOP' : rotate('t'); move(); break;
+			case 'MOV TOP' : rotate('t'); move('t'); break;
 			case 'MOV RIG' : rotate('r'); move(); break;
 			case 'MOV BAC' : rotate('b'); move(); break;
 			case 'MOV LEF' : rotate('l'); move(); break;
@@ -70,11 +70,14 @@ window.onload = function () {
 	}
 
 	function rotate(direction) {
-		if (direction == 'r') {
+		if (direction == 't') {
+			// 向上转
+			angle = 0;
+		} else if (direction == 'r') {
 			// 向右转
 			angle += 90;
 		} else if (direction == 'b') {
-			// 向后转
+			// 向下转
 			angle += 180;
 		} else if (direction == 'l') {
 			// 向左转

@@ -34,6 +34,7 @@ body {
 	box-sizing: border-box;
 	background-color: #900;
 	transition-duration: 1s;
+	transform-origin: 50% 50%;
 }
 .box::before {
 	content: "";

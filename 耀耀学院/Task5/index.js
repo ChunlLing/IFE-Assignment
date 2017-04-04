@@ -5,7 +5,7 @@ window.onload = function () {
 	// angle用于记录旋转角度
 	var angle = 0;
 	// 表示移动步长
-	var step = 40;
+	var step = parseInt($('.item').css('width'));
 
 	$('#go').click(function () {
 		action('GO');
@@ -88,8 +88,8 @@ window.onload = function () {
 	}
 
 	function move(direction) {
-		var posX = parseInt($('.box').left());
-		var posY = parseInt($('.box').top());
+		var posX = Math.ceil(parseInt($('.box').left()));
+		var posY = Math.ceil(parseInt($('.box').top()));
 		var warning = 'ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~';
 		
 
@@ -110,30 +110,32 @@ window.onload = function () {
 		} else if (direction == 'l') {
 			dir = 3;
 		}
-		console.log(dir);
+		console.log('left = ' + $('.box').left());
+		console.log('posX = ' + posX);
+		console.log($('.box').left());
 		if (dir == 0) {
 			if (posY > 0 && posY <= 360) {
 				$('.box').top( posY - step + 'px');
 			} else {
-				alert('warning');
+				alert(warning);
 			}
 		} else if (dir == 1) {
 			if (posX >= 0 && posX < 360) {
 				$('.box').left( posX + step + 'px');
 			} else {
-				alert('warning');
+				alert(warning);
 			}
 		} else if (dir == 2) {
 			if (posY >= 0 && posY < 360) {
 				$('.box').top( posY + step + 'px');
 			} else {
-				alert('warning');
+				alert(warning);
 			}
 		} else if (dir == 3) {
 			if (posX > 0 && posX <= 360) {
 				$('.box').left( posX - step + 'px');
 			} else {
-				alert('warning');
+				alert(warning);
 			}
 		}
 	}

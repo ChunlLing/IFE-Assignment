@@ -33,6 +33,7 @@ body {
 	height: 40.0px;
 	box-sizing: border-box;
 	background-color: #900;
+	transition: 1s;
 }
 .box::before {
 	content: "";

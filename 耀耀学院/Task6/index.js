@@ -1,4 +1,6 @@
 window.onload = function () {
+	var scrollTop;
+
 	// 点击弹窗按钮
 	$('#click-client').click(function () {
 		$('.cover').css('display', 'block');
@@ -29,13 +31,17 @@ window.onload = function () {
 		$(this).css('backgroundColor', '#cccceb');
 		$('#button4').css('backgroundColor', '#fff');
 		document.removeEventListener('mousewheel', preventScroll, false);
+		document.removeEventListener('scroll', preventScroll, false);
 	});
 
 	// 点击button4
 	$('#button4').click(function () {
 		$(this).css('backgroundColor', '#cccceb');
 		$('#button3').css('backgroundColor', '#fff');
+		scrollTop = document.body.scrollTop;
+		console.log(scrollTop);
 		document.addEventListener('mousewheel', preventScroll, false);
+		document.addEventListener('scroll', preventScroll, false);
 	});
 
 	function hide() {
@@ -45,5 +51,6 @@ window.onload = function () {
 
 	function preventScroll(e) {
 		e.preventDefault();
+		window.scroll(0, scrollTop);
 	}
 };

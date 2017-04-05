@@ -1,0 +1,87 @@
+body {
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	width: 100%;
+}
+
+.btn {
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	background-color: #fff;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+}
+.btn:hover {
+	background-color: #cccceb;
+}
+.btn-client {
+	margin: 50px auto;
+	text-align: center;
+}
+
+.client {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -25vh;
+	margin-left: -25vw;
+	padding-bottom: 20px;
+	width: 50vw;
+	height: 40vh;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: #fff;
+	z-index: 10;
+}
+.client h1 {
+	margin: 0px;
+	padding: 10px 36px;
+	border-bottom: 1px solid #ccc;
+	font-size: 16px;
+	color: #444;
+}
+.client p {
+	margin: 5px auto;
+	padding-left: 24px;
+	font-size: 14px;
+}
+.client p .btn {
+	transform: scale(0.7);
+	font-size: 14px;
+}
+.client .close {
+	display: inline-block;
+	float: right;
+	padding: 2px 6px;
+	border-radius: 50%;
+	background-color: rgba(55, 55, 55, .3);
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+.client .close:hover {
+	border: 1px solid rgba(55, 55, 55, .3);
+	background-color: #fff;
+	color: rgba(55, 55, 55, .3);
+}
+.client .close::before {
+	content: "\2716";
+}
+
+.cover {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(33, 33, 33, .7);
+	z-index: 9;
+}

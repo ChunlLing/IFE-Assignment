@@ -92,7 +92,6 @@ window.onload = function () {
 		var posY = Math.ceil(parseInt($('.box').top()));
 		var warning = 'ヽ(≧□≦)ノ撞到墙壁啦，换别的方向吧~';
 		
-
 		if (arguments.length == 0) {
 			// 向前走
 			switch (angle) {
@@ -110,9 +109,6 @@ window.onload = function () {
 		} else if (direction == 'l') {
 			dir = 3;
 		}
-		console.log('left = ' + $('.box').left());
-		console.log('posX = ' + posX);
-		console.log($('.box').left());
 		if (dir == 0) {
 			if (posY > 0 && posY <= 360) {
 				$('.box').top( posY - step + 'px');

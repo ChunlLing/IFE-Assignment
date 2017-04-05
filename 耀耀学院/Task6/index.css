@@ -34,7 +34,6 @@ body {
 	margin-left: -25vw;
 	padding-bottom: 20px;
 	width: 50vw;
-	height: 40vh;
 	border: 1px solid #ccc;
 	border-radius: 10px;
 	background-color: #fff;
@@ -73,6 +72,16 @@ body {
 }
 .client .close::before {
 	content: "\2716";
+}
+.client input[type="text"] {
+	margin-left: 10px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+	color: #555;
+	font-size: 12px;
 }
 
 .cover {

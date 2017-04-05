@@ -39,7 +39,6 @@ window.onload = function () {
 		$(this).css('backgroundColor', '#cccceb');
 		$('#button3').css('backgroundColor', '#fff');
 		scrollTop = document.body.scrollTop;
-		console.log(scrollTop);
 		document.addEventListener('mousewheel', preventScroll, false);
 		document.addEventListener('scroll', preventScroll, false);
 	});

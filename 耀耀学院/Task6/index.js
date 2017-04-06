@@ -16,14 +16,14 @@ window.onload = function () {
 	$('#button1').click(function () {
 		$(this).css('backgroundColor', '#cccceb');
 		$('#button2').css('backgroundColor', '#fff');
-		document.addEventListener('click', hide, true);
+		$('.cover').bind('click', hide);
 	});
 
 	// 点击button2
 	$('#button2').click(function () {
 		$(this).css('backgroundColor', '#cccceb');
 		$('#button1').css('backgroundColor', '#fff');
-		document.removeEventListener('click', hide, true);
+		$('.cover').unbind('click', hide);
 	});
 
 	// 点击button3

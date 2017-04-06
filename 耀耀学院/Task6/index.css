@@ -30,9 +30,7 @@ body {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	margin-top: -25vh;
-	margin-left: -25vw;
-	padding: 20px;
+	padding: 0px 20px;
 	border: 1px solid #ccc;
 	border-radius: 10px;
 	background-color: #fff;
@@ -40,7 +38,7 @@ body {
 }
 .client h1 {
 	margin: 0px;
-	padding-bottom: 10px;
+	padding: 10px 0px;
 	border-bottom: 1px solid #ccc;
 	font-size: 16px;
 	color: #444;
@@ -71,10 +69,14 @@ body {
 .client .close::before {
 	content: "\2716";
 }
+.client label {
+	padding-right: 40px;
+}
 .client input[type="text"] {
-	margin-left: 10px;
-	height: 24px;
-	line-height: 24px;
+	margin: 0px 10px;
+	width: 30px;
+	height: 20px;
+	line-height: 20px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	outline: none;

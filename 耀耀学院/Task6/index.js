@@ -12,6 +12,12 @@ window.onload = function () {
 	$('#click-client').click(function () {
 		$('.cover').css('display', 'block');
 		$('.client').css('display', 'block');
+		cw = clientW = parseInt($('.client').css('width'));
+		ch = clientH = parseInt($('.client').css('height'));
+		// 窗口居中
+		$('.width').text(clientW);
+		$('.height').text(clientH);
+		$('.client').css('marginLeft', -(clientW/2) + 'px').css('marginTop', -(clientH/2) + 'px');
 	});
 	// 点击关闭按钮
 	$('.close').click(function () {

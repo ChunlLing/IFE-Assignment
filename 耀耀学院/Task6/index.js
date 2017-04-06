@@ -1,22 +1,24 @@
 window.onload = function () {
 	var scrollTop;
-	var cw = clientW = parseInt($('.client').css('width'));
-	var ch = clientH = parseInt($('.client').css('height'));
-
-	// 窗口居中
-	$('.width').text(clientW);
-	$('.height').text(clientH);
-	$('.client').css('marginLeft', -(clientW/2) + 'px').css('marginTop', -(clientH/2) + 'px');
+	var cw, clientW;
+	var ch, clientH;
 
 	// 点击弹窗按钮
 	$('#click-client').click(function () {
-		$('.cover').css('display', 'block');
-		$('.client').css('display', 'block');
-		cw = clientW = parseInt($('.client').css('width'));
-		ch = clientH = parseInt($('.client').css('height'));
+		if ($('.client').css('width') == 'auto') {
+			$('.cover').css('display', 'block');
+			$('.client').css('display', 'block');
+			clientW = parseInt($('.client').css('width'));
+			clientH = parseInt($('.client').css('height'));
+			cw = clientW;
+			ch = clientH;
+		} else {
+			$('.cover').css('display', 'block');
+			$('.client').css('display', 'block');
+		}
 		// 窗口居中
-		$('.width').text(clientW);
-		$('.height').text(clientH);
+		$('.width').text(cw);
+		$('.height').text(ch);
 		$('.client').css('marginLeft', -(clientW/2) + 'px').css('marginTop', -(clientH/2) + 'px');
 	});
 	// 点击关闭按钮

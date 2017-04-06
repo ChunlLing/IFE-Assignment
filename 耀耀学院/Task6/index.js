@@ -1,30 +1,35 @@
 window.onload = function () {
-	var scrollTop;
-	var cw, clientW;
-	var ch, clientH;
+	var scrollTop;		// 记录锁屏后滚动条所在高度
+	var cw, clientW;	// cw为弹窗默认宽度，clientW为修改的宽度
+	var ch, clientH;	// ch为弹窗默认宽度，clientH为修改的宽度
+
+	clientW = parseInt($('.client').css('width'));
+	clientH = parseInt($('.client').css('height'));
+	$('.client').css('marginLeft', -(clientW/2) + 'px').css('marginTop', -(clientH/2) + 'px');
 
 	// 点击弹窗按钮
 	$('#click-client').click(function () {
 		if ($('.client').css('width') == 'auto') {
-			$('.cover').css('display', 'block');
-			$('.client').css('display', 'block');
+			$('.cover').show();
+			$('.client').show();
 			clientW = parseInt($('.client').css('width'));
 			clientH = parseInt($('.client').css('height'));
 			cw = clientW;
 			ch = clientH;
 		} else {
-			$('.cover').css('display', 'block');
-			$('.client').css('display', 'block');
+			$('.cover').show();
+			$('.client').show();
 		}
 		// 窗口居中
 		$('.width').text(cw);
 		$('.height').text(ch);
 		$('.client').css('marginLeft', -(clientW/2) + 'px').css('marginTop', -(clientH/2) + 'px');
 	});
+
 	// 点击关闭按钮
 	$('.close').click(function () {
-		$('.cover').css('display', 'none');
-		$('.client').css('display', 'none');
+		$('.cover').hide();
+		$('.client').hide();
 	});
 
 	// 点击button1,点击浮出层以外的部分关闭浮出层
@@ -78,9 +83,15 @@ window.onload = function () {
 		}
 	});
 
+	// 拖曳
+	$('.client').bind('mousedown', function (e) {
+		console.log(e.clientX);
+		console.log(this.offsetLeft);
+	});
+
 	function hide() {
-		$('.cover').css('display', 'none');
-		$('.client').css('display', 'none');
+		$('.cover').hide();
+		$('.client').hide();
 	}
 
 	function preventScroll(e) {

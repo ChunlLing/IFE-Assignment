@@ -26,7 +26,6 @@ body {
 }
 
 .client {
-	display: none;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -42,6 +41,7 @@ body {
 	border-bottom: 1px solid #ccc;
 	font-size: 16px;
 	color: #444;
+	cursor: move;
 }
 .client p {
 	margin: 5px auto;
@@ -85,7 +85,6 @@ body {
 }
 
 .cover {
-	display: none;
 	position: fixed;
 	top: 0px;
 	left: 0px;

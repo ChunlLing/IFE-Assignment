@@ -85,8 +85,17 @@ window.onload = function () {
 
 	// 拖曳
 	$('.client').bind('mousedown', function (e) {
-		console.log(e.clientX);
-		console.log(this.offsetLeft);
+		var _this = this;
+		var diffX = e.clientX - _this.offsetLeft;
+		var diffY = e.clientY - _this.offsetTop;
+		document.onmousemove = function (e) {
+			_this.style.left = e.clientX - diffX + 'px';
+			_this.style.top = e.clientY - diffY + 'px';
+		};
+		document.onmouseup = function () {
+			this.onmousemove = null;
+			this.onmouseup = null;
+		}
 	});
 
 	function hide() {

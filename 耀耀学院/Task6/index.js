@@ -89,8 +89,20 @@ window.onload = function () {
 		var diffX = e.clientX - _this.offsetLeft;
 		var diffY = e.clientY - _this.offsetTop;
 		document.onmousemove = function (e) {
-			_this.style.left = e.clientX - diffX + 'px';
-			_this.style.top = e.clientY - diffY + 'px';
+			var left = e.clientX - diffX;
+			var top = e.clientY - diffY;
+			if (left < 0) {
+				left = 0;
+			} else if (left > document.body.clientWidth - _this.offsetWidth) {
+				left = document.body.clientWidth - _this.offsetWidth;
+			}
+			if (top < 0) {
+				top = 0;
+			} else if (top > document.body.clientHeight - _this.offsetHeight) {
+				top = document.body.clientHeight - _this.offsetHeight;
+			}
+			_this.style.left = left + 'px';
+			_this.style.top = top + 'px';
 		};
 		document.onmouseup = function () {
 			this.onmousemove = null;

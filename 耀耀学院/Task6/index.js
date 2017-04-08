@@ -88,6 +88,7 @@ window.onload = function () {
 		var _this = this;
 		var diffX = e.clientX - _this.offsetLeft;
 		var diffY = e.clientY - _this.offsetTop;
+		$(_this).css('margin', 0);
 		document.onmousemove = function (e) {
 			var left = e.clientX - diffX;
 			var top = e.clientY - diffY;
@@ -101,8 +102,8 @@ window.onload = function () {
 			} else if (top > document.body.clientHeight - _this.offsetHeight) {
 				top = document.body.clientHeight - _this.offsetHeight;
 			}
-			_this.style.left = left + 'px';
-			_this.style.top = top + 'px';
+			$(_this).left(left + 'px');
+			$(_this).top(top + 'px');
 		};
 		document.onmouseup = function () {
 			this.onmousemove = null;
